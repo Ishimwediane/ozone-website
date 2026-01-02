@@ -11,9 +11,15 @@ export interface EventEdition {
         designers: number;
         models: number;
     };
-    images: string[];
-    videoUrl: string;
-    videoThumbnail: string;
+    albums: {
+        name: string;
+        images: string[];
+    }[];
+    videos: {
+        title: string;
+        url: string;
+        thumbnail: string;
+    }[];
     highlights: string[];
 }
 
@@ -33,14 +39,31 @@ export const agaciroEditions: EventEdition[] = [
             designers: 20,
             models: 50,
         },
-        images: [
-            "/images/photo.jpg",
-            "/images/photo2.jpg",
-            "/images/photo3.jpg",
-            "/images/photo4.jpg",
+        albums: [
+            {
+                name: "Main Event Gallery",
+                images: [
+                    "/images/photo.jpg",
+                    "/images/photo2.jpg",
+                    "/images/photo3.jpg",
+                    "/images/photo4.jpg",
+                ]
+            },
+            {
+                name: "Backstage & Preparations",
+                images: [
+                    "/images/photo.jpg",
+                    "/images/photo3.jpg",
+                ]
+            }
         ],
-        videoUrl: "/images/video.mp4",
-        videoThumbnail: "/images/photo2.jpg",
+        videos: [
+            {
+                title: "Official Highlights",
+                url: "/images/video.mp4",
+                thumbnail: "/images/photo2.jpg",
+            }
+        ],
         highlights: [
             "Showcased 20+ emerging and established designers",
             "Featured 50+ professional models on the runway",
@@ -53,29 +76,37 @@ export const agaciroEditions: EventEdition[] = [
         id: "edition-2",
         title: "Agaciro Fashion Gala - Edition 2",
         edition: 2,
-        date: "2025 (Upcoming)",
-        venue: "TBD",
+        date: "July 2026 (Upcoming)",
+        venue: "Kigali, Rwanda",
         theme: "Innovation Meets Tradition",
-        description: "Building on the success of Edition 1, Edition 2 promises to be even more spectacular, featuring cutting-edge designs that blend traditional Rwandan craftsmanship with modern fashion innovation.",
+        description: "Following the ground-breaking success of our first edition, Agaciro Fashion Gala returns in July 2026. This year, we're pushing the boundaries further by merging ancestral Rwandan aesthetics with futuristic high-fashion concepts. Prepare for an immersive experience where history meets the avant-garde.",
         stats: {
-            attendees: 750,
+            attendees: 1000,
             designers: 30,
-            models: 70,
+            models: 80,
         },
-        images: [
-            "/images/photo.jpg",
-            "/images/photo2.jpg",
-            "/images/photo3.jpg",
-            "/images/photo4.jpg",
+        albums: [
+            {
+                name: "Concept Art & Moodboard",
+                images: [
+                    "/images/photo.jpg",
+                    "/images/photo2.jpg",
+                ]
+            }
         ],
-        videoUrl: "/images/video.mp4",
-        videoThumbnail: "/images/photo2.jpg",
+        videos: [
+            {
+                title: "Edition 2 Teaser",
+                url: "/images/video.mp4",
+                thumbnail: "/images/photo3.jpg",
+            }
+        ],
         highlights: [
-            "Expanded designer showcase with 30+ participants",
-            "International fashion industry representatives",
-            "Live music and entertainment",
-            "Fashion workshops and masterclasses",
-            "Sustainability and ethical fashion focus",
+            "Largest runway production in East Africa",
+            "International designer collaborations",
+            "3D-printed traditional accessories reveal",
+            "Gala dinner & creative industry awards",
+            "Sustainability spotlight: Eco-friendly textiles",
         ],
     },
 ];

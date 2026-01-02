@@ -3,393 +3,179 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
-    Heart, Target, Eye, Award, Users, TrendingUp,
-    ArrowRight, CheckCircle, Lightbulb, Handshake
+    Award, Heart, Target, Eye,
+    ArrowRight, CheckCircle, Zap, ShieldCheck,
+    Rocket, Globe, Briefcase, Star
 } from "lucide-react";
+import { useTheme } from "@/context/ThemeContext";
 
 export default function AboutPage() {
-    const values = [
+    const { theme } = useTheme();
+
+    const whyChooseUs = [
         {
-            icon: <Award className="w-8 h-8" />,
-            title: "Excellence",
-            description: "We strive for excellence in every project, delivering quality that exceeds expectations.",
+            icon: <Zap className="w-8 h-8" />,
+            title: "Expertise & Innovation",
+            description: "We blend years of industry experience with fresh, avant-garde concepts to deliver unique entertainment solutions."
         },
         {
             icon: <Heart className="w-8 h-8" />,
-            title: "Empowerment",
-            description: "We believe in empowering individuals, especially women, through creativity and opportunity.",
+            title: "Empowerment Focus",
+            description: "At our core is a commitment to social impact, creating pathways for women and youth in the creative industries."
         },
         {
-            icon: <Lightbulb className="w-8 h-8" />,
-            title: "Innovation",
-            description: "We embrace creativity and innovation to deliver fresh, impactful solutions.",
+            icon: <Globe className="w-8 h-8" />,
+            title: "Vast Network",
+            description: "Our strong connections across fashion, film, and event sectors give our partners an unparalleled reach."
         },
         {
-            icon: <Handshake className="w-8 h-8" />,
-            title: "Integrity",
-            description: "We operate with honesty, transparency, and professionalism in all our dealings.",
-        },
+            icon: <ShieldCheck className="w-8 h-8" />,
+            title: "Professional Excellence",
+            description: "We uphold the highest standards of production and management, ensuring every project is a masterpiece."
+        }
     ];
 
-    const stats = [
-        { number: "10+", label: "Projects Completed", icon: <CheckCircle className="w-6 h-6" /> },
-        { number: "3+", label: "Major Events", icon: <Award className="w-6 h-6" /> },
-        { number: "20+", label: "Models Trained", icon: <Users className="w-6 h-6" /> },
-        { number: "100%", label: "Client Satisfaction", icon: <TrendingUp className="w-6 h-6" /> },
-    ];
-
-    const milestones = [
-        {
-            year: "2020",
-            title: "Company Founded",
-            description: "Ozone Entertainment was established with a vision to transform the entertainment industry in Rwanda.",
-        },
-        {
-            year: "2021",
-            title: "NAF MODEL EMPIRE Launched",
-            description: "Started our fashion agency program, training and placing aspiring models with top agencies.",
-        },
-        {
-            year: "2022",
-            title: "Empowering Her Initiative",
-            description: "Launched dedicated women empowerment programs focused on creativity and entrepreneurship.",
-        },
-        {
-            year: "2023",
-            title: "Major Event Success",
-            description: "Successfully organized and managed multiple high-profile events and productions.",
-        },
+    const values = [
+        { title: "Excellence", description: "Beyond the standard." },
+        { title: "Inclusion", description: "Empowering every voice." },
+        { title: "Integrity", description: "Transparency and trust." },
+        { title: "Innovation", description: "Designing the future." }
     ];
 
     return (
-        <div className="overflow-hidden">
-            {/* Hero Section */}
-            <section className="relative pt-32 pb-20 bg-gradient-hero text-white">
-                <div className="absolute inset-0 opacity-10">
-                    <div className="absolute inset-0 bg-[url('/images/pattern.svg')] bg-repeat"></div>
+        <div className="min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)] transition-colors duration-500 overflow-x-hidden">
+            {/* --- Premium Hero Section --- */}
+            <section className="relative h-[80vh] flex items-center justify-center overflow-hidden bg-black">
+                <div className="absolute inset-0 z-0">
+                    <Image
+                        src="/images/photo3.jpg"
+                        alt="Ozone Aesthetic"
+                        fill
+                        className="object-cover opacity-60 grayscale"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-[var(--bg-primary)]"></div>
                 </div>
 
+                <div className="container-custom relative z-10 text-center">
+                    <span className="text-[10px] font-black tracking-[1.5em] text-[#F39C12] uppercase mb-8 block animate-fadeIn">THE OZONE STORY</span>
+                    <h1 className="text-5xl md:text-8xl font-serif font-bold text-white leading-[0.9] tracking-tighter mb-8 mix-blend-difference">
+                        BEYOND <br />
+                        <span className="italic font-light text-[#F39C12]">POSSIBLE.</span>
+                    </h1>
+                </div>
+            </section>
+
+            {/* --- Narrative Intro --- */}
+            <section className="section py-32 border-b border-[var(--border-color)]">
+                <div className="container-custom">
+                    <div className="max-w-5xl">
+                        <span className="text-[10px] font-black tracking-widest text-[#F39C12] uppercase mb-4 block">OUR PHILOSOPHY</span>
+                        <h2 className="text-4xl md:text-6xl font-serif font-bold mb-12 leading-none uppercase tracking-tighter">
+                            We don't just organize; we <span className="italic font-light text-[#F39C12]">elevate.</span>
+                        </h2>
+                        <div className="grid md:grid-cols-2 gap-16 items-start">
+                            <p className="text-xl md:text-2xl font-light text-[var(--text-secondary)] leading-relaxed">
+                                Ozone Entertainment was born from a vision to revolutionize Rwanda's creative landscape. We are a powerhouse of talent, strategy, and execution—bridging the gap between raw potential and global standards.
+                            </p>
+                            <p className="text-lg text-[var(--text-tertiary)] leading-relaxed">
+                                Whether it's the high-stakes runway of the Agaciro Fashion Gala or the intricate production of a cinematic piece, we operate with a singular lens: excellence without compromise. Our journey is one of empowerment, specifically dedicated to carving spaces for women in the spotlight.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* --- WHY CHOOSE US --- */}
+            <section className="section py-40 relative overflow-hidden bg-[var(--bg-secondary)]">
                 <div className="container-custom relative z-10">
-                    <div className="max-w-4xl mx-auto text-center animate-fadeInUp">
-                        <div className="flex items-center justify-center space-x-3 mb-6">
-                            <div className="w-12 h-1 bg-[--orange-accent]"></div>
-                            <span className="text-[--orange-accent] font-semibold tracking-wider uppercase">
-                                About Us
-                            </span>
-                            <div className="w-12 h-1 bg-[--orange-accent]"></div>
-                        </div>
-
-                        <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                            Capturing <span className="text-[--orange-accent]">Moments</span>,<br />
-                            Empowering <span className="text-[--orange-accent]">Dreams</span>
-                        </h1>
-
-                        <p className="text-xl text-gray-200 leading-relaxed">
-                            We are a professional entertainment company dedicated to delivering exceptional services
-                            while empowering individuals through creativity and opportunity.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            {/* Mission & Vision */}
-            <section className="section bg-white">
-                <div className="container-custom">
-                    <div className="grid lg:grid-cols-2 gap-12 items-center">
-                        {/* Image */}
-                        <div className="animate-fadeInLeft">
-                            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                                <Image
-                                    src="/images/model.jpg"
-                                    alt="Ozone Entertainment Team"
-                                    width={600}
-                                    height={400}
-                                    className="w-full h-auto object-cover"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                            </div>
-                        </div>
-
-                        {/* Content */}
-                        <div className="space-y-8 animate-fadeInRight">
-                            <div>
-                                <div className="flex items-center space-x-3 mb-4">
-                                    <Target className="w-8 h-8 text-[--orange-accent]" />
-                                    <h2 className="text-3xl font-bold text-[--dark-navy]">Our Mission</h2>
-                                </div>
-                                <p className="text-lg text-gray-700 leading-relaxed">
-                                    To provide world-class entertainment services that capture unforgettable moments while
-                                    empowering individuals, especially women, through creative opportunities and professional development.
-                                </p>
-                            </div>
-
-                            <div>
-                                <div className="flex items-center space-x-3 mb-4">
-                                    <Eye className="w-8 h-8 text-[--orange-accent]" />
-                                    <h2 className="text-3xl font-bold text-[--dark-navy]">Our Vision</h2>
-                                </div>
-                                <p className="text-lg text-gray-700 leading-relaxed">
-                                    To be the leading entertainment company in Rwanda, recognized for excellence, innovation,
-                                    and our commitment to empowering the next generation of creative professionals.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Values */}
-            <section className="section section-light">
-                <div className="container-custom">
-                    <div className="text-center mb-16">
-                        <h2 className="text-4xl md:text-5xl font-bold text-[--dark-navy] mb-4">
-                            Our <span className="gradient-text">Values</span>
-                        </h2>
-                        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                            The principles that guide everything we do
-                        </p>
-                    </div>
-
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {values.map((value, index) => (
-                            <div
-                                key={index}
-                                className="card text-center hover:shadow-2xl"
-                            >
-                                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[--orange-accent] to-[--orange-600] flex items-center justify-center text-white mx-auto mb-4">
-                                    {value.icon}
-                                </div>
-                                <h3 className="text-xl font-bold text-[--dark-navy] mb-2">
-                                    {value.title}
-                                </h3>
-                                <p className="text-gray-600">
-                                    {value.description}
-                                </p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Empowering Her Section */}
-            <section className="section bg-gradient-to-r from-[--orange-accent] to-[--orange-600] text-white">
-                <div className="container-custom">
-                    <div className="grid lg:grid-cols-2 gap-12 items-center">
-                        <div className="space-y-6 animate-fadeInLeft">
-                            <div className="flex items-center space-x-3">
-                                <Heart className="w-12 h-12" />
-                                <h2 className="text-4xl md:text-5xl font-bold">Empowering Her</h2>
-                            </div>
-
-                            <p className="text-xl leading-relaxed">
-                                Our flagship women empowerment program is dedicated to creating opportunities for women
-                                to thrive in the creative and entertainment industry.
-                            </p>
-
-                            <div className="space-y-4">
-                                <h3 className="text-2xl font-bold">What We Offer:</h3>
-                                <ul className="space-y-3">
-                                    {[
-                                        "Professional skills training and development",
-                                        "Mentorship from industry leaders",
-                                        "Entrepreneurship support and guidance",
-                                        "Networking and collaboration opportunities",
-                                        "Career advancement resources",
-                                        "Leadership development programs",
-                                    ].map((item, idx) => (
-                                        <li key={idx} className="flex items-start space-x-3">
-                                            <CheckCircle className="w-6 h-6 flex-shrink-0 mt-0.5" />
-                                            <span className="text-lg">{item}</span>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-
-                            <Link
-                                href="/contact"
-                                className="btn-secondary inline-flex items-center space-x-2 bg-white text-[--orange-accent] hover:bg-gray-100"
-                            >
-                                <span>Join Our Program</span>
-                                <ArrowRight className="w-5 h-5" />
-                            </Link>
-                        </div>
-
-                        <div className="animate-fadeInRight">
-                            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                                <Image
-                                    src="/images/fash.jpg"
-                                    alt="Empowering Her Program"
-                                    width={600}
-                                    height={400}
-                                    className="w-full h-auto object-cover"
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Stats */}
-            <section className="section bg-[--dark-navy] text-white">
-                <div className="container-custom">
-                    <div className="text-center mb-12">
-                        <h2 className="text-4xl md:text-5xl font-bold mb-4">
-                            Our <span className="text-[--orange-accent]">Impact</span>
-                        </h2>
-                        <p className="text-xl text-gray-300">
-                            Numbers that showcase our commitment to excellence
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                        {stats.map((stat, index) => (
-                            <div
-                                key={index}
-                                className="text-center p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300"
-                            >
-                                <div className="flex justify-center mb-4 text-[--orange-accent]">
-                                    {stat.icon}
-                                </div>
-                                <div className="text-5xl font-bold text-[--orange-accent] mb-2">
-                                    {stat.number}
-                                </div>
-                                <div className="text-lg text-gray-300">{stat.label}</div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Milestones */}
-            <section className="section section-light">
-                <div className="container-custom">
-                    <div className="text-center mb-16">
-                        <h2 className="text-4xl md:text-5xl font-bold text-[--dark-navy] mb-4">
-                            Our <span className="gradient-text">Journey</span>
-                        </h2>
-                        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                            Key milestones in our growth and development
-                        </p>
-                    </div>
-
-                    <div className="max-w-4xl mx-auto">
-                        <div className="space-y-8">
-                            {milestones.map((milestone, index) => (
-                                <div
-                                    key={index}
-                                    className="flex gap-6 animate-fadeInUp"
-                                    style={{ animationDelay: `${index * 0.1}s` }}
-                                >
-                                    <div className="flex-shrink-0">
-                                        <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[--orange-accent] to-[--orange-600] flex items-center justify-center text-white font-bold text-lg">
-                                            {milestone.year}
-                                        </div>
-                                    </div>
-                                    <div className="flex-1 pb-8 border-l-2 border-gray-200 pl-6 -ml-10 mt-10">
-                                        <h3 className="text-2xl font-bold text-[--dark-navy] mb-2">
-                                            {milestone.title}
-                                        </h3>
-                                        <p className="text-gray-700 leading-relaxed">
-                                            {milestone.description}
-                                        </p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* For Investors */}
-            <section className="section bg-white">
-                <div className="container-custom">
-                    <div className="max-w-4xl mx-auto">
-                        <div className="text-center mb-12">
-                            <h2 className="text-4xl md:text-5xl font-bold text-[--dark-navy] mb-4">
-                                Investment <span className="gradient-text">Opportunities</span>
+                    <div className="flex flex-col lg:flex-row justify-between items-end mb-24 gap-8">
+                        <div className="max-w-2xl">
+                            <span className="text-[10px] font-black tracking-[0.5em] text-[#F39C12] uppercase mb-4 block">THE OZONE ADVANTAGE</span>
+                            <h2 className="text-5xl md:text-8xl font-serif font-bold leading-[0.8] uppercase tracking-tighter">
+                                Why <br /> <span className="italic font-light">Choose Us.</span>
                             </h2>
-                            <p className="text-xl text-gray-600">
-                                Partner with us to create impact and drive growth
-                            </p>
                         </div>
+                        <p className="max-w-md text-[var(--text-tertiary)] text-lg border-l border-[#F39C12] pl-8">
+                            In a saturated market, we stand out through precision, vision, and a relentless focus on our partners' growth.
+                        </p>
+                    </div>
 
-                        <div className="card bg-gradient-to-br from-[--primary-blue] to-[--bright-blue] text-white">
-                            <div className="space-y-6">
-                                <p className="text-lg leading-relaxed">
-                                    Ozone Entertainment is actively seeking strategic partners and investors who share our vision
-                                    of transforming the entertainment industry while creating meaningful social impact through our
-                                    Empowering Her program.
+                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-[var(--border-color)]">
+                        {whyChooseUs.map((item, idx) => (
+                            <div key={idx} className="bg-[var(--bg-primary)] p-12 transition-all duration-700 hover:bg-[#F39C12] group">
+                                <div className="text-[#F39C12] group-hover:text-white mb-8 transition-colors">
+                                    {item.icon}
+                                </div>
+                                <h3 className="text-2xl font-bold mb-4 group-hover:text-white transition-colors">{item.title}</h3>
+                                <p className="text-[var(--text-secondary)] group-hover:text-white/80 transition-colors leading-relaxed">
+                                    {item.description}
                                 </p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
 
-                                <div className="grid md:grid-cols-2 gap-6">
-                                    <div>
-                                        <h3 className="text-xl font-bold mb-3">Why Invest in Ozone?</h3>
-                                        <ul className="space-y-2">
-                                            {[
-                                                "Growing market demand",
-                                                "Proven track record",
-                                                "Social impact focus",
-                                                "Experienced team",
-                                                "Scalable business model",
-                                            ].map((item, idx) => (
-                                                <li key={idx} className="flex items-center space-x-2">
-                                                    <CheckCircle className="w-5 h-5" />
-                                                    <span>{item}</span>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
+            {/* --- Values Grid (Editorial Style) --- */}
+            <section className="section py-32">
+                <div className="container-custom">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                        {values.map((v, i) => (
+                            <div key={i} className="border-t-2 border-[var(--text-primary)] pt-8 group">
+                                <span className="text-[10px] font-black text-[#F39C12] block mb-4">0{i + 1}</span>
+                                <h4 className="text-3xl font-serif font-bold uppercase mb-2 group-hover:tracking-widest transition-all duration-700">{v.title}</h4>
+                                <p className="text-[10px] uppercase tracking-widest text-[var(--text-tertiary)]">{v.description}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
 
-                                    <div>
-                                        <h3 className="text-xl font-bold mb-3">Investment Areas:</h3>
-                                        <ul className="space-y-2">
-                                            {[
-                                                "Program expansion",
-                                                "Equipment & technology",
-                                                "Training facilities",
-                                                "Marketing & outreach",
-                                                "Team development",
-                                            ].map((item, idx) => (
-                                                <li key={idx} className="flex items-center space-x-2">
-                                                    <CheckCircle className="w-5 h-5" />
-                                                    <span>{item}</span>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div className="pt-4">
-                                    <Link
-                                        href="/contact"
-                                        className="btn-primary inline-flex items-center space-x-2 bg-[--orange-accent] hover:bg-[--orange-600]"
-                                    >
-                                        <span>Contact Us for Investment Opportunities</span>
-                                        <ArrowRight className="w-5 h-5" />
-                                    </Link>
-                                </div>
+            {/* --- Mission & Vision (Asymmetrical) --- */}
+            <section className="section py-40 bg-black text-white">
+                <div className="container-custom">
+                    <div className="grid md:grid-cols-2 gap-24 items-center">
+                        <div className="relative aspect-square border border-white/10 overflow-hidden">
+                            <Image src="/images/photo2.jpg" alt="Mission" fill className="object-cover grayscale hover:grayscale-0 transition-all duration-1000" />
+                            <div className="absolute inset-0 bg-black/20"></div>
+                        </div>
+                        <div className="space-y-16">
+                            <div>
+                                <span className="text-[10px] font-black tracking-widest text-[#F39C12] uppercase mb-4 block">OUR MISSION</span>
+                                <p className="text-3xl md:text-4xl font-serif font-light leading-snug">
+                                    To provide <span className="italic text-[#F39C12]">world-class</span> entertainment that captures moments and empowers dreams.
+                                </p>
+                            </div>
+                            <div>
+                                <span className="text-[10px] font-black tracking-widest text-[#F39C12] uppercase mb-4 block">OUR VISION</span>
+                                <p className="text-3xl md:text-4xl font-serif font-light leading-snug">
+                                    To be the <span className="italic text-[#F39C12]">global benchmark</span> for creative excellence in Africa.
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* CTA Section */}
-            <section className="section bg-gradient-to-r from-[--primary-blue] to-[--bright-blue] text-white">
-                <div className="container-custom text-center">
-                    <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                        Join Us on Our Journey
-                    </h2>
-                    <p className="text-xl mb-8 max-w-2xl mx-auto text-gray-100">
-                        Whether you're looking for our services or interested in partnering with us, we'd love to hear from you.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Link href="/contact" className="btn-primary inline-flex items-center justify-center space-x-2">
-                            <span>Get in Touch</span>
-                            <ArrowRight className="w-5 h-5" />
+            {/* --- Final CTA --- */}
+            <section className="section py-32 text-center">
+                <div className="container-custom">
+                    <h3 className="text-4xl md:text-5xl font-serif font-bold mb-16 uppercase tracking-tighter">
+                        Let's Create <br />
+                        <span className="italic font-light">The Extraordinary.</span>
+                    </h3>
+                    <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
+                        <Link
+                            href="/contact"
+                            className="group flex items-center gap-6 text-[10px] font-black uppercase tracking-[0.5em] text-white bg-black px-12 py-6 hover:bg-[#F39C12] transition-all"
+                        >
+                            PARTNER WITH US <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
                         </Link>
-                        <Link href="/services" className="bg-white text-[--primary-blue] hover:bg-gray-100 font-semibold px-8 py-4 rounded-lg transition-all duration-300 inline-flex items-center justify-center space-x-2">
-                            <span>Explore Our Services</span>
+                        <Link
+                            href="/services"
+                            className="text-[10px] font-black uppercase tracking-[0.5em] border-b border-[var(--text-primary)] pb-2 hover:border-[#F39C12] transition-all"
+                        >
+                            EXPLORE SERVICES
                         </Link>
                     </div>
                 </div>

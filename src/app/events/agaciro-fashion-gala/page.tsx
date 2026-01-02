@@ -6,16 +6,21 @@ import { agaciroEditions } from "@/data/editions";
 export default function AgaciroFashionGalaPage() {
     return (
         <div className="min-h-screen bg-[var(--bg-primary)]">
-            {/* Hero Section */}
-            <section className="relative h-[70vh] min-h-[600px] flex items-center justify-center overflow-hidden">
-                <Image
-                    src="/images/photo2.jpg"
-                    alt="Agaciro Fashion Gala"
-                    fill
-                    className="object-cover"
-                    priority
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-black/90 to-black/50"></div>
+            {/* Hero Section with Video */}
+            <section className="relative h-[70vh] min-h-[600px] flex items-center justify-center overflow-hidden bg-black">
+                <div className="absolute inset-0 z-0">
+                    <video
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        className="absolute inset-0 w-full h-full object-cover object-top opacity-70 transition-all duration-1000"
+                    >
+                        <source src="/images/video.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                    <div className="absolute inset-0 bg-gradient-to-r from-black/90 to-black/50"></div>
+                </div>
 
                 <div className="container-custom relative z-10 text-center">
                     <div className="inline-block mb-4">
@@ -108,7 +113,7 @@ export default function AgaciroFashionGalaPage() {
                                     {/* Image */}
                                     <div className={`relative h-[300px] lg:h-auto ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
                                         <Image
-                                            src={edition.videoThumbnail}
+                                            src={edition.videos[0].thumbnail}
                                             alt={edition.title}
                                             fill
                                             className="object-cover group-hover:scale-110 transition-transform duration-500"

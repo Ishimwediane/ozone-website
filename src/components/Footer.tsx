@@ -8,8 +8,8 @@ export default function Footer() {
     const currentYear = new Date().getFullYear();
 
     const services = [
-        { name: "Event Organizer", href: "/services#events" },
-        { name: "Fashion Agency", href: "/services#fashion" },
+        { name: "Event Organizer", href: "/services/event-organizer" },
+        { name: "Fashion Agency", href: "/services/naf-model-empire" },
         { name: "Film Production", href: "/services#film" },
         { name: "Artist Management", href: "/services#artists" },
         { name: "Empowering Her", href: "/services#empowering" },
