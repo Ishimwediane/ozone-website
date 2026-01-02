@@ -1,44 +1,52 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
-import { X, Play } from "lucide-react";
+import Link from "next/link";
+import { useState, useEffect } from "react";
+import { X, Play, ArrowRight, Filter } from "lucide-react";
+import { useTheme } from "@/context/ThemeContext";
 
 export default function PortfolioPage() {
+    const { theme } = useTheme();
     const [activeTab, setActiveTab] = useState<'photos' | 'film' | 'events' | 'artists' | 'fashion'>('photos');
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [lightboxIndex, setLightboxIndex] = useState(0);
+    const [isLoaded, setIsLoaded] = useState(false);
+
+    useEffect(() => {
+        setIsLoaded(true);
+    }, []);
 
     const portfolioItems = {
         photos: [
-            { src: "/images/photo.jpg", title: "Professional Photography", type: "image" },
-            { src: "/images/photo1.jpg", title: "Portrait Session", type: "image" },
-            { src: "/images/photo2.jpg", title: "Event Coverage", type: "image" },
-            { src: "/images/photo3.jpg", title: "Creative Shoot", type: "image" },
-            { src: "/images/photo4.jpg", title: "Professional Portraits", type: "image" },
-            { src: "/images/photo5.jpg", title: "Studio Photography", type: "image" },
+            { src: "/images/photo.jpg", title: "Visual Narrative I", type: "image", size: "large" },
+            { src: "/images/photo1.jpg", title: "Portrait Studies", type: "image", size: "small" },
+            { src: "/images/photo2.jpg", title: "Event Chronology", type: "image", size: "medium" },
+            { src: "/images/photo3.jpg", title: "Abstract Light", type: "image", size: "small" },
+            { src: "/images/photo4.jpg", title: "Human Form", type: "image", size: "medium" },
+            { src: "/images/photo5.jpg", title: "Studio Series", type: "image", size: "small" },
         ],
         film: [
-            { src: "/images/filme2.jpg", title: "Film Production", type: "image" },
-            { src: "/images/filme.jpg", title: "Video Production", type: "image" },
-            { src: "/images/filme3.jpg", title: "Creative Filming", type: "image" },
-            { src: "/images/videography.mp4", title: "Videography Reel", type: "video" },
+            { src: "/images/filme2.jpg", title: "Cinematic Odyssey", type: "image", size: "large" },
+            { src: "/images/filme.jpg", title: "The Frame", type: "image", size: "medium" },
+            { src: "/images/filme3.jpg", title: "Motion Essence", type: "image", size: "small" },
+            { src: "/images/videography.mp4", title: "Director's Reel", type: "video", size: "medium" },
         ],
         events: [
-            { src: "/images/event.jpg", title: "Corporate Event", type: "image" },
-            { src: "/images/umurava.mp4", title: "Event Highlights", type: "video" },
-            { src: "/images/Event-2024.mp4", title: "2024 Event Coverage", type: "video" },
+            { src: "/images/event.jpg", title: "Grand Scale", type: "image", size: "large" },
+            { src: "/images/umurava.mp4", title: "Energy Capture", type: "video", size: "medium" },
+            { src: "/images/Event-2024.mp4", title: "Legacy Events", type: "video", size: "small" },
         ],
         artists: [
-            { src: "/images/artist1.jpg", title: "Artist Management", type: "image" },
-            { src: "/images/artist2.jpg", title: "Artist Promotion", type: "image" },
+            { src: "/images/artist1.jpg", title: "Creative Minds", type: "image", size: "medium" },
+            { src: "/images/artist2.jpg", title: "Talent Spotlight", type: "image", size: "large" },
         ],
         fashion: [
-            { src: "/images/fash.jpg", title: "Fashion Show", type: "image" },
-            { src: "/images/fash1.jpg", title: "Runway Event", type: "image" },
-            { src: "/images/fash2.jpg", title: "Model Portfolio", type: "image" },
-            { src: "/images/video.mp4", title: "Fashion Reel", type: "video" },
-            { src: "/images/fash.mp4", title: "Fashion Event", type: "video" },
+            { src: "/images/fash.jpg", title: "Runway Aura", type: "image", size: "large" },
+            { src: "/images/fash1.jpg", title: "High Gloss", type: "image", size: "small" },
+            { src: "/images/fash2.jpg", title: "Editorial Edge", type: "image", size: "medium" },
+            { src: "/images/video.mp4", title: "Fashion Motion", type: "video", size: "medium" },
+            { src: "/images/fash.mp4", title: "Catwalk Story", type: "video", size: "small" },
         ],
     };
 
@@ -54,95 +62,103 @@ export default function PortfolioPage() {
     };
 
     return (
-        <div className="overflow-hidden">
-            {/* Hero Section */}
-            <section className="relative pt-32 pb-20 bg-gradient-hero text-white">
-                <div className="absolute inset-0 opacity-10">
-                    <div className="absolute inset-0 bg-[url('/images/pattern.svg')] bg-repeat"></div>
+        <div className="min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)] transition-colors duration-500 overflow-x-hidden">
+            {/* --- Premium Hero Section --- */}
+            <section className="relative h-[60vh] flex items-center justify-center overflow-hidden bg-black">
+                <div className="absolute inset-0 z-0">
+                    <Image
+                        src="/images/photo.jpg"
+                        alt="Portfolio Aesthetic"
+                        fill
+                        className="object-cover opacity-40 grayscale"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-[var(--bg-primary)]"></div>
+                    <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-5 bg-repeat"></div>
                 </div>
 
-                <div className="container-custom relative z-10">
-                    <div className="max-w-4xl mx-auto text-center animate-fadeInUp">
-                        <div className="flex items-center justify-center space-x-3 mb-6">
-                            <div className="w-12 h-1 bg-[--orange-accent]"></div>
-                            <span className="text-[--orange-accent] font-semibold tracking-wider uppercase">
-                                Our Portfolio
-                            </span>
-                            <div className="w-12 h-1 bg-[--orange-accent]"></div>
+                <div className="container-custom relative z-10 text-center">
+                    <span className="text-[10px] font-black tracking-[1.5em] text-[#F39C12] uppercase mb-8 block animate-fadeIn">CREATIVE JOURNAL</span>
+                    <h1 className="text-5xl md:text-8xl font-serif font-bold text-white leading-tight tracking-tighter mb-4 mix-blend-difference">
+                        OUR <span className="italic font-light text-[#F39C12]">LEGACY.</span>
+                    </h1>
+                </div>
+            </section>
+
+            {/* --- Filter & Navigation Section --- */}
+            <section className="sticky top-20 z-40 bg-[var(--bg-primary)] border-y border-[var(--border-color)] py-8 backdrop-blur-md bg-opacity-80">
+                <div className="container-custom">
+                    <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+                        <div className="flex items-center gap-4 text-[10px] font-black tracking-widest uppercase">
+                            <Filter className="w-4 h-4 text-[#F39C12]" />
+                            <span>Refine by Category</span>
                         </div>
-
-                        <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                            Our <span className="text-[--orange-accent]">Creative</span> Work
-                        </h1>
-
-                        <p className="text-xl text-gray-200 leading-relaxed">
-                            Explore our portfolio of events, photography, videography, fashion, and artist management projects.
-                        </p>
+                        <div className="flex flex-wrap justify-center gap-2">
+                            {Object.keys(portfolioItems).map((key) => (
+                                <button
+                                    key={key}
+                                    onClick={() => setActiveTab(key as any)}
+                                    className={`px-6 py-2 text-[10px] font-bold uppercase tracking-widest transition-all duration-300 border ${activeTab === key
+                                        ? 'bg-[#F39C12] text-white border-[#F39C12]'
+                                        : 'bg-transparent text-[var(--text-secondary)] border-[var(--border-color)] hover:border-[#F39C12] hover:text-[#F39C12]'
+                                        }`}
+                                >
+                                    {key}
+                                </button>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>
 
-            {/* Portfolio Gallery */}
-            <section className="section bg-white">
+            {/* --- Asymmetrical Editorial Grid --- */}
+            <section className="py-24">
                 <div className="container-custom">
-                    {/* Filter Tabs */}
-                    <div className="flex flex-wrap justify-center gap-4 mb-12">
-                        {[
-                            { key: 'photos', label: 'Photos' },
-                            { key: 'film', label: 'Film' },
-                            { key: 'events', label: 'Events' },
-                            { key: 'artists', label: 'Artists' },
-                            { key: 'fashion', label: 'Fashion' },
-                        ].map((tab) => (
-                            <button
-                                key={tab.key}
-                                onClick={() => setActiveTab(tab.key as any)}
-                                className={`px-6 py-3 rounded-lg font-semibold text-lg transition-all duration-300 border-2 ${activeTab === tab.key
-                                        ? 'bg-[--orange-accent] text-white border-[--orange-accent]'
-                                        : 'bg-white text-gray-700 border-gray-300 hover:border-[--orange-accent] hover:text-[--orange-accent]'
-                                    }`}
-                            >
-                                {tab.label}
-                            </button>
-                        ))}
-                    </div>
-
-                    {/* Gallery Grid */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
                         {currentItems.map((item, index) => (
                             <div
-                                key={index}
-                                className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer animate-scaleIn"
-                                style={{ animationDelay: `${index * 0.05}s` }}
+                                key={`${activeTab}-${index}`}
+                                className={`relative group overflow-hidden bg-[var(--bg-secondary)] cursor-pointer break-inside-avoid animate-fadeInUp`}
+                                style={{ animationDelay: `${index * 0.1}s` }}
                                 onClick={() => openLightbox(index)}
                             >
-                                <div className="aspect-[4/3] relative">
+                                <div className="relative overflow-hidden group">
                                     {item.type === 'image' ? (
                                         <Image
                                             src={item.src}
                                             alt={item.title}
-                                            fill
-                                            className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                            width={800}
+                                            height={item.size === 'large' ? 1200 : item.size === 'medium' ? 800 : 600}
+                                            className="w-full h-auto object-cover grayscale transition-all duration-1000 group-hover:grayscale-0 group-hover:scale-105"
                                         />
                                     ) : (
-                                        <div className="relative w-full h-full">
+                                        <div className="relative aspect-[9/16] bg-black">
                                             <video
                                                 src={item.src}
-                                                className="w-full h-full object-cover"
+                                                className="w-full h-full object-cover opacity-70"
                                                 muted
                                                 loop
                                                 playsInline
                                             />
-                                            <div className="absolute inset-0 flex items-center justify-center bg-black/30">
-                                                <Play className="w-16 h-16 text-white" />
+                                            <div className="absolute inset-0 flex items-center justify-center">
+                                                <Play className="w-12 h-12 text-white/50 group-hover:text-white transition-colors" />
                                             </div>
                                         </div>
                                     )}
 
-                                    {/* Overlay */}
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                        <div className="absolute bottom-0 left-0 right-0 p-6">
-                                            <h3 className="text-white font-bold text-xl">{item.title}</h3>
+                                    {/* Subtle Editorial Labels */}
+                                    <div className="absolute top-6 left-6 z-20">
+                                        <span className="text-[8px] font-black text-white/40 tracking-[0.3em] uppercase block mb-1">PROJECT 0{index + 1}</span>
+                                        <div className="h-px w-8 bg-[#F39C12] origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700"></div>
+                                    </div>
+
+                                    {/* Overlay Content */}
+                                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-700 flex flex-col justify-end p-8">
+                                        <h3 className="text-2xl font-serif font-bold text-white uppercase tracking-tighter translate-y-4 group-hover:translate-y-0 transition-transform duration-700">
+                                            {item.title}
+                                        </h3>
+                                        <div className="flex items-center gap-4 text-[10px] font-bold text-[#F39C12] mt-4 translate-y-8 group-hover:translate-y-0 transition-transform duration-700 delay-100 uppercase tracking-widest">
+                                            <span>View Work</span>
+                                            <ArrowRight className="w-4 h-4" />
                                         </div>
                                     </div>
                                 </div>
@@ -152,76 +168,84 @@ export default function PortfolioPage() {
                 </div>
             </section>
 
-            {/* Lightbox */}
+            {/* --- Lightbox --- */}
             {lightboxOpen && (
-                <div className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4">
+                <div className="fixed inset-0 z-[100] bg-black flex items-center justify-center">
                     <button
                         onClick={closeLightbox}
-                        className="absolute top-6 right-6 bg-white/10 hover:bg-[--orange-accent] text-white rounded-full p-3 transition-all duration-300"
-                        aria-label="Close"
+                        className="absolute top-10 right-10 z-[110] text-white hover:text-[#F39C12] transition-colors"
                     >
-                        <X className="w-7 h-7" />
+                        <X className="w-10 h-10 font-thin" />
                     </button>
 
-                    <div className="max-w-6xl w-full">
-                        {currentItems[lightboxIndex].type === 'image' ? (
-                            <div className="relative w-full h-[80vh]">
-                                <Image
+                    <div className="container-custom h-[85vh] flex flex-col items-center justify-center gap-8">
+                        <div className="relative w-full h-full flex items-center justify-center p-4">
+                            {currentItems[lightboxIndex].type === 'image' ? (
+                                <div className="relative w-full h-full">
+                                    <Image
+                                        src={currentItems[lightboxIndex].src}
+                                        alt={currentItems[lightboxIndex].title}
+                                        fill
+                                        className="object-contain"
+                                    />
+                                </div>
+                            ) : (
+                                <video
                                     src={currentItems[lightboxIndex].src}
-                                    alt={currentItems[lightboxIndex].title}
-                                    fill
-                                    className="object-contain"
+                                    controls
+                                    autoPlay
+                                    className="max-h-full max-w-full"
                                 />
-                            </div>
-                        ) : (
-                            <video
-                                src={currentItems[lightboxIndex].src}
-                                controls
-                                autoPlay
-                                className="w-full max-h-[80vh] rounded-lg"
-                            />
-                        )}
-                        <div className="text-center mt-6">
-                            <h3 className="text-white text-2xl font-bold">
+                            )}
+                        </div>
+
+                        <div className="text-center w-full max-w-2xl">
+                            <span className="text-[10px] font-black text-[#F39C12] tracking-[1em] uppercase block mb-4">GALLERY SELECTION</span>
+                            <h3 className="text-4xl md:text-6xl font-serif font-bold text-white uppercase tracking-tighter">
                                 {currentItems[lightboxIndex].title}
                             </h3>
                         </div>
                     </div>
 
                     {/* Navigation */}
-                    <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-4">
+                    <div className="absolute bottom-10 left-0 right-0 z-[110] flex justify-center gap-20">
                         <button
                             onClick={() => setLightboxIndex((prev) => (prev > 0 ? prev - 1 : currentItems.length - 1))}
-                            className="bg-white/10 hover:bg-[--orange-accent] text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+                            className="text-[10px] font-black text-white/50 hover:text-[#F39C12] uppercase tracking-[0.5em] transition-all"
                         >
-                            Previous
+                            PREVIOUS
                         </button>
                         <button
                             onClick={() => setLightboxIndex((prev) => (prev < currentItems.length - 1 ? prev + 1 : 0))}
-                            className="bg-white/10 hover:bg-[--orange-accent] text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+                            className="text-[10px] font-black text-white/50 hover:text-[#F39C12] uppercase tracking-[0.5em] transition-all"
                         >
-                            Next
+                            NEXT
                         </button>
                     </div>
                 </div>
             )}
 
-            {/* CTA Section */}
-            <section className="section bg-gradient-to-r from-[--primary-blue] to-[--bright-blue] text-white">
-                <div className="container-custom text-center">
-                    <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                        Let's Create Something Amazing Together
+            {/* --- CTA Section --- */}
+            <section className="section py-40 bg-black text-white text-center">
+                <div className="container-custom">
+                    <span className="text-[10px] font-black tracking-[1em] text-[#F39C12] uppercase mb-8 block">READY TO START?</span>
+                    <h2 className="text-5xl md:text-8xl font-serif font-bold mb-16 uppercase tracking-tighter leading-none">
+                        Your vision, <br />
+                        <span className="italic font-light">our execution.</span>
                     </h2>
-                    <p className="text-xl mb-8 max-w-2xl mx-auto text-gray-100">
-                        Ready to start your next project? Get in touch with us today.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="/contact" className="btn-primary inline-flex items-center justify-center space-x-2">
-                            <span>Contact Us</span>
-                        </a>
-                        <a href="/services" className="bg-white text-[--primary-blue] hover:bg-gray-100 font-semibold px-8 py-4 rounded-lg transition-all duration-300 inline-flex items-center justify-center space-x-2">
-                            <span>View Services</span>
-                        </a>
+                    <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
+                        <Link
+                            href="/contact"
+                            className="group flex items-center gap-6 text-[10px] font-black uppercase tracking-[0.5em] text-black bg-white px-12 py-6 hover:bg-[#F39C12] hover:text-white transition-all"
+                        >
+                            BOOK A PRODUCTION <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+                        </Link>
+                        <Link
+                            href="/services"
+                            className="text-[10px] font-black uppercase tracking-[0.5em] border-b border-white pb-2 hover:border-[#F39C12] hover:text-[#F39C12] transition-all"
+                        >
+                            DISCOVER SERVICES
+                        </Link>
                     </div>
                 </div>
             </section>
