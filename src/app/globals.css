@@ -38,6 +38,26 @@
     --warning: #F59E0B;
     --error: #EF4444;
     --info: #3B82F6;
+
+    /* Theme Variables - Light Mode (Default) */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f9fafb;
+    --bg-tertiary: #f3f4f6;
+    --text-primary: #111827;
+    --text-secondary: #6b7280;
+    --text-tertiary: #9ca3af;
+    --border-color: #e5e7eb;
+  }
+
+  .dark {
+    /* Theme Variables - Dark Mode */
+    --bg-primary: #1A1A1A;
+    --bg-secondary: #2D2D2D;
+    --bg-tertiary: #3A3A3A;
+    --text-primary: #ffffff;
+    --text-secondary: #d1d5db;
+    --text-tertiary: #9ca3af;
+    --border-color: #374151;
   }
 
 

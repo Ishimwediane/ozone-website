@@ -15,7 +15,7 @@ export default function AgaciroFashionGalaSection() {
     ];
 
     return (
-        <section className="section bg-[#1A1A1A]">
+        <section className="section bg-[var(--bg-primary)]">
             <div className="container-custom">
                 {/* Section Header */}
                 <div className="text-center mb-16 animate-fadeInUp">
@@ -24,10 +24,10 @@ export default function AgaciroFashionGalaSection() {
                             Featured Project
                         </span>
                     </div>
-                    <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4">
+                    <h2 className="text-4xl md:text-5xl font-serif font-bold text-[var(--text-primary)] mb-4">
                         Agaciro Fashion Gala
                     </h2>
-                    <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+                    <p className="text-xl text-[var(--text-secondary)] max-w-3xl mx-auto leading-relaxed">
                         A spectacular celebration of fashion, culture, and creativity. Edition 1 was a resounding
                         success, bringing together designers, models, and fashion enthusiasts in an unforgettable evening.
                     </p>
@@ -35,7 +35,7 @@ export default function AgaciroFashionGalaSection() {
 
                 {/* Video Section */}
                 <div className="mb-16 animate-fadeInUp" style={{ animationDelay: '0.1s' }}>
-                    <div className="relative aspect-video rounded-3xl overflow-hidden bg-[#2D2D2D] border-2 border-gray-800 hover:border-[#F39C12] transition-all duration-500 group">
+                    <div className="relative aspect-video rounded-3xl overflow-hidden bg-[var(--bg-secondary)] border-2 border-[var(--border-color)] hover:border-[#F39C12] transition-all duration-500 group">
                         {!isVideoPlaying ? (
                             <>
                                 {/* Video Thumbnail */}
@@ -66,7 +66,7 @@ export default function AgaciroFashionGalaSection() {
                                 controls
                                 autoPlay
                                 className="w-full h-full"
-                                src="/videos/agaciro-gala.mp4"
+                                src="/images/video.mp4"
                             >
                                 Your browser does not support the video tag.
                             </video>
@@ -79,7 +79,7 @@ export default function AgaciroFashionGalaSection() {
                     {galleryImages.map((image, index) => (
                         <div
                             key={index}
-                            className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-[#2D2D2D] border-2 border-gray-800 hover:border-[#F39C12] transition-all duration-500 group hover:-translate-y-2"
+                            className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-[var(--bg-secondary)] border-2 border-[var(--border-color)] hover:border-[#F39C12] transition-all duration-500 group hover:-translate-y-2"
                         >
                             <Image
                                 src={image}
@@ -99,26 +99,26 @@ export default function AgaciroFashionGalaSection() {
 
                 {/* Event Stats */}
                 <div className="mt-16 grid md:grid-cols-3 gap-8 animate-fadeInUp" style={{ animationDelay: '0.3s' }}>
-                    <div className="text-center bg-[#2D2D2D] border-2 border-gray-800 rounded-2xl p-8 hover:border-[#F39C12] transition-all duration-300">
+                    <div className="text-center bg-[var(--bg-secondary)] border-2 border-[var(--border-color)] rounded-2xl p-8 hover:border-[#F39C12] transition-all duration-300">
                         <div className="text-4xl md:text-5xl font-serif font-bold text-[#F39C12] mb-2">
                             500+
                         </div>
-                        <div className="text-white font-medium mb-1">Attendees</div>
-                        <div className="text-gray-400 text-sm">Fashion Enthusiasts</div>
+                        <div className="text-[var(--text-primary)] font-medium mb-1">Attendees</div>
+                        <div className="text-[var(--text-tertiary)] text-sm">Fashion Enthusiasts</div>
                     </div>
-                    <div className="text-center bg-[#2D2D2D] border-2 border-gray-800 rounded-2xl p-8 hover:border-[#F39C12] transition-all duration-300">
+                    <div className="text-center bg-[var(--bg-secondary)] border-2 border-[var(--border-color)] rounded-2xl p-8 hover:border-[#F39C12] transition-all duration-300">
                         <div className="text-4xl md:text-5xl font-serif font-bold text-[#F39C12] mb-2">
                             20+
                         </div>
-                        <div className="text-white font-medium mb-1">Designers</div>
-                        <div className="text-gray-400 text-sm">Showcased Collections</div>
+                        <div className="text-[var(--text-primary)] font-medium mb-1">Designers</div>
+                        <div className="text-[var(--text-tertiary)] text-sm">Showcased Collections</div>
                     </div>
-                    <div className="text-center bg-[#2D2D2D] border-2 border-gray-800 rounded-2xl p-8 hover:border-[#F39C12] transition-all duration-300">
+                    <div className="text-center bg-[var(--bg-secondary)] border-2 border-[var(--border-color)] rounded-2xl p-8 hover:border-[#F39C12] transition-all duration-300">
                         <div className="text-4xl md:text-5xl font-serif font-bold text-[#F39C12] mb-2">
                             50+
                         </div>
-                        <div className="text-white font-medium mb-1">Models</div>
-                        <div className="text-gray-400 text-sm">On The Runway</div>
+                        <div className="text-[var(--text-primary)] font-medium mb-1">Models</div>
+                        <div className="text-[var(--text-tertiary)] text-sm">On The Runway</div>
                     </div>
                 </div>
             </div>

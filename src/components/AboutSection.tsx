@@ -20,23 +20,23 @@ export default function AboutSection() {
                     </div>
 
                     {/* Right Side - Content with dark background */}
-                    <div className="bg-[#2D2D2D] h-[500px] lg:h-[700px] flex items-center px-8 md:px-12 lg:px-16 animate-fadeInRight">
+                    <div className="bg-[var(--bg-secondary)] h-[500px] lg:h-[700px] flex items-center px-8 md:px-12 lg:px-16 animate-fadeInRight">
                         <div className="w-full">
                             {/* Section Label */}
                             <div className="inline-block mb-4">
-                                <span className="text-xs font-semibold tracking-[0.4em] uppercase text-gray-400">
+                                <span className="text-xs font-semibold tracking-[0.4em] uppercase text-[var(--text-tertiary)]">
                                     FUN FACTS
                                 </span>
                             </div>
 
                             {/* Title */}
-                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white mb-6 leading-tight">
+                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[var(--text-primary)] mb-6 leading-tight">
                                 Ozone In Big Record <br />
                                 Of Success.
                             </h2>
 
                             {/* Description */}
-                            <p className="text-base text-gray-300 mb-12 leading-relaxed max-w-lg">
+                            <p className="text-base text-[var(--text-secondary)] mb-12 leading-relaxed max-w-lg">
                                 We are a leading entertainment company dedicated to creating unforgettable experiences.
                                 From event organization to fashion, film production, and artist management, we bring
                                 creativity and passion to every project.
@@ -52,10 +52,10 @@ export default function AboutSection() {
                                     <div className="text-5xl md:text-6xl font-serif font-bold text-[#F39C12] mb-2">
                                         500+
                                     </div>
-                                    <div className="text-sm font-medium text-white">
+                                    <div className="text-sm font-medium text-[var(--text-primary)]">
                                         Projects
                                     </div>
-                                    <div className="text-xs text-gray-400">
+                                    <div className="text-xs text-[var(--text-tertiary)]">
                                         Successfully Completed
                                     </div>
                                 </div>
@@ -68,10 +68,10 @@ export default function AboutSection() {
                                     <div className="text-5xl md:text-6xl font-serif font-bold text-[#F39C12] mb-2">
                                         10k+
                                     </div>
-                                    <div className="text-sm font-medium text-white">
+                                    <div className="text-sm font-medium text-[var(--text-primary)]">
                                         Happy Clients
                                     </div>
-                                    <div className="text-xs text-gray-400">
+                                    <div className="text-xs text-[var(--text-tertiary)]">
                                         Across Industries
                                     </div>
                                 </div>
@@ -84,10 +84,10 @@ export default function AboutSection() {
                                     <div className="text-5xl md:text-6xl font-serif font-bold text-[#F39C12] mb-2">
                                         15+
                                     </div>
-                                    <div className="text-sm font-medium text-white">
+                                    <div className="text-sm font-medium text-[var(--text-primary)]">
                                         Years
                                     </div>
-                                    <div className="text-xs text-gray-400">
+                                    <div className="text-xs text-[var(--text-tertiary)]">
                                         Of Excellence
                                     </div>
                                 </div>
