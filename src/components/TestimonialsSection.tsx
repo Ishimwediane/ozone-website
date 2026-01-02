@@ -23,13 +23,13 @@ export default function TestimonialsSection() {
     ];
 
     return (
-        <section className="section section-light">
+        <section className="section bg-[#1A1A1A]">
             <div className="container-custom">
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold text-[--dark-navy] mb-4">
-                        Client <span className="gradient-text">Testimonials</span>
+                    <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                        Client <span className="text-[#F39C12]">Testimonials</span>
                     </h2>
-                    <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                    <p className="text-xl text-gray-400 max-w-2xl mx-auto">
                         Hear what our clients say about working with us
                     </p>
                 </div>
@@ -38,17 +38,17 @@ export default function TestimonialsSection() {
                     {testimonials.map((testimonial, index) => (
                         <div
                             key={index}
-                            className="card bg-white"
+                            className="bg-[#2D2D2D] border-2 border-gray-800 rounded-2xl p-8 transition-all duration-500 hover:border-[#F39C12] hover:shadow-xl hover:shadow-[#F39C12]/10 hover:-translate-y-2"
                         >
                             <div className="flex space-x-1 mb-4">
                                 {[...Array(testimonial.rating)].map((_, i) => (
-                                    <Star key={i} className="w-5 h-5 fill-[--orange-accent] text-[--orange-accent]" />
+                                    <Star key={i} className="w-5 h-5 fill-[#F39C12] text-[#F39C12]" />
                                 ))}
                             </div>
-                            <p className="text-gray-700 mb-6 italic">"{testimonial.content}"</p>
+                            <p className="text-gray-300 mb-6 italic leading-relaxed">"{testimonial.content}"</p>
                             <div>
-                                <div className="font-bold text-[--dark-navy]">{testimonial.name}</div>
-                                <div className="text-sm text-gray-500">{testimonial.role}</div>
+                                <div className="font-bold text-white">{testimonial.name}</div>
+                                <div className="text-sm text-gray-400">{testimonial.role}</div>
                             </div>
                         </div>
                     ))}
