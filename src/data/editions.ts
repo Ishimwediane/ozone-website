@@ -17,6 +17,8 @@ export interface EventEdition {
     highlights: string[];
 }
 
+export type AgaciroEdition = EventEdition;
+
 export const agaciroEditions: EventEdition[] = [
     {
         id: "edition-1",
