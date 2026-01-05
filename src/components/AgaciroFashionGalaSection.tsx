@@ -1,125 +1,113 @@
 "use client";
 
 import Image from "next/image";
-import { Play } from "lucide-react";
-import { useState } from "react";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import ScrollReveal from "./ScrollReveal";
 
 export default function AgaciroFashionGalaSection() {
-    const [isVideoPlaying, setIsVideoPlaying] = useState(false);
-
-    const galleryImages = [
-        "/images/photo.jpg",
-        "/images/photo2.jpg",
-        "/images/photo3.jpg",
-        "/images/photo4.jpg",
-    ];
-
     return (
         <section className="section bg-[var(--bg-primary)]">
             <div className="container-custom">
                 {/* Section Header */}
-                <div className="text-center mb-16 animate-fadeInUp">
-                    <div className="inline-block mb-4">
-                        <span className="text-xs font-semibold tracking-[0.4em] uppercase text-[#F39C12]">
-                            Featured Project
-                        </span>
-                    </div>
-                    <h2 className="text-4xl md:text-5xl font-serif font-bold text-[var(--text-primary)] mb-4">
-                        Agaciro Fashion Gala
-                    </h2>
-                    <p className="text-xl text-[var(--text-secondary)] max-w-3xl mx-auto leading-relaxed">
-                        A spectacular celebration of fashion, culture, and creativity. Edition 1 was a resounding
-                        success, bringing together designers, models, and fashion enthusiasts in an unforgettable evening.
-                    </p>
-                </div>
+                <ScrollReveal animation="fadeInDown" className="mini-header">
+                    <h2>Flagship Event</h2>
+                </ScrollReveal>
 
-                {/* Video Section */}
-                <div className="mb-16 animate-fadeInUp" style={{ animationDelay: '0.1s' }}>
-                    <div className="relative aspect-video rounded-3xl overflow-hidden bg-[var(--bg-secondary)] border-2 border-[var(--border-color)] hover:border-[#F39C12] transition-all duration-500 group">
-                        {!isVideoPlaying ? (
-                            <>
-                                {/* Video Thumbnail */}
+                {/* Edition Cards Grid */}
+                <div className="grid md:grid-cols-2 gap-8 items-stretch">
+                    {/* Edition 1 Card - Hosted */}
+                    <ScrollReveal animation="fadeInUp" delay={0.1} className="h-full">
+                        <div className="group relative bg-[var(--bg-secondary)] border border-[var(--border-color)] rounded-3xl overflow-hidden transition-all duration-700 hover:border-[var(--orange-accent)] hover:shadow-2xl hover:shadow-black/10 h-full">
+                            <div className="relative aspect-[16/9] md:aspect-[4/3] lg:aspect-[16/9] overflow-hidden">
                                 <Image
-                                    src="/images/photo2.jpg"
-                                    alt="Agaciro Fashion Gala Video"
+                                    src="/images/photo.jpg"
+                                    alt="Agaciro Fashion Gala Edition 1"
                                     fill
-                                    className="object-cover"
+                                    className="object-cover group-hover:scale-110 transition-transform duration-1000"
                                 />
-                                {/* Dark Overlay */}
-                                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-all duration-300"></div>
-                                {/* Play Button */}
-                                <button
-                                    onClick={() => setIsVideoPlaying(true)}
-                                    className="absolute inset-0 flex items-center justify-center group"
-                                >
-                                    <div className="w-20 h-20 md:w-24 md:h-24 bg-[#F39C12] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-2xl">
-                                        <Play className="w-10 h-10 md:w-12 md:h-12 text-white ml-1" fill="white" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                                <div className="absolute bottom-6 left-6 flex items-center space-x-3">
+                                    <div className="bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20">
+                                        <span className="text-white text-[8px] font-semibold tracking-widest uppercase">HOSTED</span>
                                     </div>
-                                </button>
-                                {/* Label */}
-                                <div className="absolute bottom-6 left-6 bg-black/70 backdrop-blur-sm px-4 py-2 rounded-full">
-                                    <span className="text-white font-semibold text-sm">Watch Highlights</span>
-                                </div>
-                            </>
-                        ) : (
-                            <video
-                                controls
-                                autoPlay
-                                className="w-full h-full"
-                                src="/images/video.mp4"
-                            >
-                                Your browser does not support the video tag.
-                            </video>
-                        )}
-                    </div>
-                </div>
-
-                {/* Image Gallery */}
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
-                    {galleryImages.map((image, index) => (
-                        <div
-                            key={index}
-                            className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-[var(--bg-secondary)] border-2 border-[var(--border-color)] hover:border-[#F39C12] transition-all duration-500 group hover:-translate-y-2"
-                        >
-                            <Image
-                                src={image}
-                                alt={`Agaciro Fashion Gala ${index + 1}`}
-                                fill
-                                className="object-cover group-hover:scale-110 transition-transform duration-500"
-                            />
-                            {/* Overlay on hover */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <div className="absolute bottom-4 left-4 right-4">
-                                    <p className="text-white font-semibold text-sm">Gallery {index + 1}</p>
                                 </div>
                             </div>
+                            <div className="p-8">
+                                <div className="flex justify-between items-start mb-4">
+                                    <div>
+                                        <h3 className="text-xl md:text-2xl font-semibold text-[var(--text-primary)] mb-1 tracking-tight">
+                                            Edition 01
+                                        </h3>
+                                        <p className="text-[10px] text-[var(--text-tertiary)] font-semibold tracking-widest uppercase">The Inaugural Showcase</p>
+                                    </div>
+                                    <div className="text-right">
+                                        <p className="text-[8px] text-[var(--orange-accent)] font-semibold tracking-widest uppercase mb-1">Impact</p>
+                                        <p className="text-sm font-semibold text-[var(--text-primary)] tracking-tighter">500+ Attendees</p>
+                                    </div>
+                                </div>
+                                <p className="text-xs text-[var(--text-secondary)] mb-8 leading-relaxed opacity-80 h-10 overflow-hidden">
+                                    A groundbreaking night of fashion and culture that set the standard for entertainment in the region.
+                                </p>
+                                <Link
+                                    href="/portfolio"
+                                    className="inline-flex items-center space-x-3 text-[10px] font-semibold tracking-[0.2em] uppercase text-[var(--orange-accent)] group-hover:space-x-4 transition-all duration-300"
+                                >
+                                    <span>VIEW HIGHLIGHTS</span>
+                                    <ArrowRight className="w-4 h-4" />
+                                </Link>
+                            </div>
                         </div>
-                    ))}
-                </div>
+                    </ScrollReveal>
 
-                {/* Event Stats */}
-                <div className="mt-16 grid md:grid-cols-3 gap-8 animate-fadeInUp" style={{ animationDelay: '0.3s' }}>
-                    <div className="text-center bg-[var(--bg-secondary)] border-2 border-[var(--border-color)] rounded-2xl p-8 hover:border-[#F39C12] transition-all duration-300">
-                        <div className="text-4xl md:text-5xl font-serif font-bold text-[#F39C12] mb-2">
-                            500+
+                    {/* Edition 2 Card - Current Focus */}
+                    <ScrollReveal animation="fadeInUp" delay={0.2} className="h-full">
+                        <div className="group relative bg-black border border-[var(--orange-accent)]/30 rounded-3xl overflow-hidden transition-all duration-700 hover:border-[var(--orange-accent)] hover:shadow-2xl hover:shadow-[var(--orange-accent)]/10 h-full">
+                            <div className="relative aspect-[16/9] md:aspect-[4/3] lg:aspect-[16/9] overflow-hidden">
+                                <Image
+                                    src="/images/photo2.jpg"
+                                    alt="Agaciro Fashion Gala Edition 2"
+                                    fill
+                                    className="object-cover group-hover:scale-110 transition-transform duration-1000 opacity-80"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                                <div className="absolute top-6 right-6">
+                                    <div className="bg-[var(--orange-accent)] px-4 py-2 rounded-full shadow-lg">
+                                        <span className="text-white text-[8px] font-semibold tracking-widest uppercase">PRIMARY FOCUS</span>
+                                    </div>
+                                </div>
+                                <div className="absolute bottom-6 left-6 flex items-center space-x-3">
+                                    <div className="bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20">
+                                        <span className="text-white text-[8px] font-semibold tracking-widest uppercase">COMING SOON</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="p-8">
+                                <div className="flex justify-between items-start mb-4">
+                                    <div>
+                                        <h3 className="text-xl md:text-2xl font-semibold text-white mb-1 tracking-tight">
+                                            Edition 02
+                                        </h3>
+                                        <p className="text-[10px] text-[var(--orange-accent)] font-semibold tracking-widest uppercase">The Next Chapter</p>
+                                    </div>
+                                    <div className="text-right">
+                                        <p className="text-[8px] text-white/50 font-semibold tracking-widest uppercase mb-1">Expectation</p>
+                                        <p className="text-sm font-semibold text-white tracking-tighter">1000+ Guests</p>
+                                    </div>
+                                </div>
+                                <p className="text-xs text-white/60 mb-8 leading-relaxed h-10 overflow-hidden">
+                                    Elevating the experience with international designers, tech-integrated runways, and refined artistic direction.
+                                </p>
+                                <Link
+                                    href="/contact"
+                                    className="inline-flex items-center space-x-3 text-[10px] font-semibold tracking-[0.2em] uppercase text-[var(--orange-accent)] group-hover:space-x-4 transition-all duration-300"
+                                >
+                                    <span>PARTNER WITH US</span>
+                                    <ArrowRight className="w-4 h-4" />
+                                </Link>
+                            </div>
                         </div>
-                        <div className="text-[var(--text-primary)] font-medium mb-1">Attendees</div>
-                        <div className="text-[var(--text-tertiary)] text-sm">Fashion Enthusiasts</div>
-                    </div>
-                    <div className="text-center bg-[var(--bg-secondary)] border-2 border-[var(--border-color)] rounded-2xl p-8 hover:border-[#F39C12] transition-all duration-300">
-                        <div className="text-4xl md:text-5xl font-serif font-bold text-[#F39C12] mb-2">
-                            20+
-                        </div>
-                        <div className="text-[var(--text-primary)] font-medium mb-1">Designers</div>
-                        <div className="text-[var(--text-tertiary)] text-sm">Showcased Collections</div>
-                    </div>
-                    <div className="text-center bg-[var(--bg-secondary)] border-2 border-[var(--border-color)] rounded-2xl p-8 hover:border-[#F39C12] transition-all duration-300">
-                        <div className="text-4xl md:text-5xl font-serif font-bold text-[#F39C12] mb-2">
-                            50+
-                        </div>
-                        <div className="text-[var(--text-primary)] font-medium mb-1">Models</div>
-                        <div className="text-[var(--text-tertiary)] text-sm">On The Runway</div>
-                    </div>
+                    </ScrollReveal>
                 </div>
             </div>
         </section>

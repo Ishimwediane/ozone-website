@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Star, Award, Users, Heart, Plus } from "lucide-react";
+import ScrollReveal from "@/components/ScrollReveal";
 import { useState, useEffect } from "react";
 
 export default function NAFModelEmpirePage() {
@@ -142,19 +143,23 @@ export default function NAFModelEmpirePage() {
                 {/* Refined Minimal Overlay */}
                 <div className="container-custom relative z-10 pointer-events-none">
                     <div className="max-w-4xl p-0">
-                        <span className="text-[10px] font-black tracking-[1.2em] text-[#F39C12] uppercase mb-10 block">NAF MODEL EMPIRE</span>
-                        <h1 className="text-7xl md:text-[12rem] font-serif font-bold text-white leading-[0.75] tracking-tighter mb-12 mix-blend-difference">
-                            MODERN <br />
-                            <span className="italic font-light text-[#F39C12]">ELEGANCE.</span>
-                        </h1>
-                        <div className="pointer-events-auto">
+                        <ScrollReveal animation="fadeInDown">
+                            <span className="text-[10px] font-black tracking-[1.2em] text-[#F39C12] uppercase mb-10 block">NAF MODEL EMPIRE</span>
+                        </ScrollReveal>
+                        <ScrollReveal animation="fadeInUp">
+                            <h1 className="text-5xl md:text-7xl lg:text-8xl font-semibold text-white leading-[0.75] tracking-tighter mb-12">
+                                MODERN <br />
+                                <span className="text-[var(--orange-accent)] opacity-90">ELEGANCE.</span>
+                            </h1>
+                        </ScrollReveal>
+                        <ScrollReveal animation="fadeInUp" delay={0.2} className="pointer-events-auto">
                             <Link
                                 href="#board"
-                                className="inline-flex items-center gap-6 text-[10px] font-black uppercase tracking-[0.5em] text-white border-b border-white pb-3 transition-all hover:gap-10 hover:border-[#F39C12] hover:text-[#F39C12]"
+                                className="inline-flex items-center gap-6 text-[10px] font-semibold uppercase tracking-[0.5em] text-white border-b border-white/20 pb-3 transition-all hover:gap-10 hover:border-[#F39C12] hover:text-[#F39C12]"
                             >
-                                EXPLORE THE BOARD <ArrowRight className="w-5 h-5" />
+                                EXPLORE THE BOARD <ArrowRight className="w-4 h-4" />
                             </Link>
-                        </div>
+                        </ScrollReveal>
                     </div>
                 </div>
 
@@ -178,13 +183,15 @@ export default function NAFModelEmpirePage() {
             {/* --- The Board (Sharp Masonry Grid) --- */}
             <section id="board" className="section relative py-32 bg-[var(--bg-secondary)]">
                 <div className="container-custom">
-                    <div className="flex flex-col md:flex-row justify-between items-baseline mb-24 gap-8">
+                    <ScrollReveal animation="fadeInDown" className="mini-header">
+                        <h2>Professional Board</h2>
+                    </ScrollReveal>
+                    <div className="flex flex-col md:flex-row justify-between items-baseline mb-16 gap-8">
                         <div>
-                            <span className="text-[10px] font-black tracking-[0.5em] uppercase text-[#F39C12]">PROFESSIONAL BOARD</span>
-                            <h2 className="text-5xl md:text-8xl font-serif font-bold mt-2">The <span className="italic font-light opacity-50">Talent</span></h2>
+                            <h2 className="text-3xl md:text-5xl font-semibold mt-2">The <span className="opacity-50">Talent</span></h2>
                         </div>
-                        <div className="flex space-x-10 text-[10px] font-bold tracking-[0.3em] uppercase opacity-60">
-                            <button className="text-[#F39C12] border-b border-[#F39C12]">ALL</button>
+                        <div className="flex space-x-10 text-[10px] font-semibold tracking-[0.3em] uppercase opacity-60">
+                            <button className="text-[#F39C12]">ALL</button>
                             <button className="hover:text-[#F39C12] transition-colors">EDITORIAL</button>
                             <button className="hover:text-[#F39C12] transition-colors">RUNWAY</button>
                         </div>
@@ -219,13 +226,13 @@ export default function NAFModelEmpirePage() {
                                 </div>
 
                                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-500">
-                                    <div className="absolute bottom-8 left-8 right-8">
-                                        <p className="text-[9px] uppercase tracking-[0.4em] text-[#F39C12] mb-1">{model.category}</p>
-                                        <h3 className="text-2xl font-serif font-bold text-white uppercase">{model.name}</h3>
-                                        <div className="mt-4 flex items-center justify-between">
-                                            <span className="text-[10px] text-white/60 tracking-widest font-bold">HEIGHT: {model.height}</span>
-                                            <div className="w-10 h-10 border border-white/20 flex items-center justify-center text-white">
-                                                <Plus className="w-5 h-5" />
+                                    <div className="absolute bottom-6 left-6 right-6">
+                                        <p className="text-[7px] uppercase tracking-[0.4em] text-[#F39C12] mb-1">{model.category}</p>
+                                        <h3 className="text-base font-semibold text-white uppercase">{model.name}</h3>
+                                        <div className="mt-3 flex items-center justify-between">
+                                            <span className="text-[9px] text-white/60 tracking-widest font-semibold">HT: {model.height}</span>
+                                            <div className="w-8 h-8 border border-white/20 flex items-center justify-center text-white">
+                                                <Plus className="w-4 h-4" />
                                             </div>
                                         </div>
                                     </div>
@@ -247,18 +254,22 @@ export default function NAFModelEmpirePage() {
                             </div>
                         </div>
 
-                        <div>
-                            <span className="text-[10px] font-black tracking-[0.5em] text-[#F39C12] uppercase mb-6 block font-bold">DISCOVERY & DEVELOPMENT</span>
-                            <h2 className="text-5xl md:text-7xl font-serif font-bold mb-10 leading-none">Elevating <br /> <span className="italic font-light opacity-50">Local</span> Talent</h2>
+                        <div className="space-y-8">
+                            <ScrollReveal animation="fadeInDown" className="mini-header items-start">
+                                <h2 className="!items-start">Discovery & Development</h2>
+                            </ScrollReveal>
+                            <ScrollReveal animation="fadeInUp">
+                                <h2 className="text-3xl md:text-5xl font-semibold mb-10 leading-tight">Elevating <br /> <span className="opacity-50">Local</span> Talent</h2>
+                            </ScrollReveal>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                 {trainingPrograms.map((prog, i) => (
-                                    <div key={i} className="group p-8 border border-[var(--border-color)] transition-all hover:border-[#F39C12] rounded-none bg-[var(--bg-secondary)]/10">
-                                        <div className="w-12 h-12 bg-[#F39C12] text-white flex items-center justify-center mb-6">
-                                            {prog.icon}
+                                    <div key={i} className="group p-6 border border-[var(--border-color)] transition-all hover:border-[#F39C12] rounded-none bg-[var(--bg-secondary)]/10">
+                                        <div className="w-10 h-10 bg-[#F39C12] text-white flex items-center justify-center mb-6">
+                                            <div className="scale-75">{prog.icon}</div>
                                         </div>
-                                        <h4 className="text-xl font-bold mb-3">{prog.title}</h4>
-                                        <p className="text-[var(--text-secondary)] text-sm font-light leading-relaxed">{prog.description}</p>
+                                        <h4 className="text-base font-semibold mb-2">{prog.title}</h4>
+                                        <p className="text-[9px] md:text-[10px] text-[var(--text-secondary)] font-medium leading-relaxed">{prog.description}</p>
                                     </div>
                                 ))}
                             </div>
@@ -276,15 +287,19 @@ export default function NAFModelEmpirePage() {
                             <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-transparent to-transparent"></div>
                         </div>
                         <div className="lg:w-1/2 p-16 md:p-32 flex flex-col justify-center items-start text-white">
-                            <span className="text-[#F39C12] font-black uppercase tracking-[1em] text-[10px] mb-10">OPEN CASTING CALL</span>
-                            <h2 className="text-6xl md:text-[10rem] font-serif font-bold mb-12 leading-[0.7] tracking-tighter">THE <br /> NEXT <br /> <span className="italic font-light opacity-30">ICON.</span></h2>
-                            <Link
-                                href="/contact"
-                                className="group inline-flex items-center gap-6 text-xs font-black uppercase tracking-[0.5em] text-white bg-transparent border-2 border-white px-12 py-6 rounded-none hover:bg-white hover:text-black transition-all"
-                            >
-                                Apply Today
-                                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-3" />
-                            </Link>
+                            <ScrollReveal animation="fadeInDown" className="mini-header items-start">
+                                <h2 className="!items-start !text-white/60">Open Casting Call</h2>
+                            </ScrollReveal>
+                            <ScrollReveal animation="fadeInUp">
+                                <h2 className="text-4xl md:text-7xl font-semibold mb-12 leading-[0.7] tracking-tighter">THE <br /> NEXT <br /> <span className="opacity-30">ICON.</span></h2>
+                                <Link
+                                    href="/contact"
+                                    className="group inline-flex items-center gap-6 text-[10px] font-semibold uppercase tracking-[0.5em] text-white bg-transparent border border-white/20 px-12 py-5 rounded-full hover:bg-white hover:text-black transition-all"
+                                >
+                                    Apply Today
+                                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-3" />
+                                </Link>
+                            </ScrollReveal>
                         </div>
                     </div>
                 </div>

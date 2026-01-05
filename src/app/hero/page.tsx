@@ -57,12 +57,12 @@ export default function HeroPage() {
                     <div className="flex items-center justify-center min-h-[calc(100vh-5rem)] py-20">
                         <div className="text-center px-4">
                             {/* Bold Typography */}
-                            <h1 className="font-serif text-[120px] md:text-[160px] lg:text-[200px] font-black text-white leading-none tracking-tight drop-shadow-2xl">
+                            <h1 className="text-[120px] md:text-[160px] lg:text-[200px] font-black text-white leading-none tracking-tight drop-shadow-2xl">
                                 OZONE
                             </h1>
 
                             {/* Subtitle */}
-                            <p className="text-lg md:text-xl text-white/90 italic mt-6 drop-shadow-lg">
+                            <p className="text-lg md:text-xl text-white/90 mt-6 drop-shadow-lg">
                                 Step Into Effortless Elegance With Passion
                             </p>
 
@@ -86,8 +86,8 @@ export default function HeroPage() {
                             key={index}
                             onClick={() => goToSlide(index)}
                             className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide
-                                    ? 'bg-white w-8'
-                                    : 'bg-white/50 hover:bg-white/75'
+                                ? 'bg-white w-8'
+                                : 'bg-white/50 hover:bg-white/75'
                                 }`}
                             aria-label={`Go to slide ${index + 1}`}
                         />

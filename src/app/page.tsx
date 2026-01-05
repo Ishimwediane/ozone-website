@@ -14,11 +14,9 @@ export default function HomePage() {
       {/* Hero Section Component */}
       <Hero />
 
-      {/* About Section */}
-      <AboutSection />
-
       {/* All Other Sections as Components */}
       <ServicesSection />
+      <AboutSection />
       <EmpoweringHerSection />
       <AgaciroFashionGalaSection />
       <TestimonialsSection />

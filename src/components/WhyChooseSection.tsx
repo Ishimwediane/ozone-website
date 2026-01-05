@@ -28,7 +28,7 @@ export default function WhyChooseSection() {
         <section className="section bg-white">
             <div className="container-custom">
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold text-[--dark-navy] mb-4">
+                    <h2 className="text-4xl md:text-5xl font-semibold text-[--dark-navy] mb-4">
                         Why Choose <span className="gradient-text">Ozone</span>
                     </h2>
                     <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -45,7 +45,7 @@ export default function WhyChooseSection() {
                             <div className="w-16 h-16 rounded-full bg-[--orange-accent]/10 flex items-center justify-center text-[--orange-accent] mx-auto">
                                 {item.icon}
                             </div>
-                            <h3 className="text-xl font-bold text-[--dark-navy]">{item.title}</h3>
+                            <h3 className="text-xl font-semibold text-[--dark-navy]">{item.title}</h3>
                             <p className="text-gray-600">{item.description}</p>
                         </div>
                     ))}

@@ -39,7 +39,7 @@ export default function Footer() {
                                 />
                             </div>
                             <div className="flex flex-col">
-                                <span className="font-bold text-2xl text-[#00509E]">OZONE</span>
+                                <span className="font-semibold text-2xl text-[#00509E]">OZONE</span>
                                 <span className="text-sm font-medium text-[#F39C12]">
                                     ENTERTAINMENTS
                                 </span>
@@ -83,7 +83,7 @@ export default function Footer() {
 
                     {/* Quick Links */}
                     <div>
-                        <h3 className="text-lg font-bold mb-4 text-[#00509E]">Quick Links</h3>
+                        <h3 className="text-lg font-semibold mb-4 text-[#00509E]">Quick Links</h3>
                         <ul className="space-y-2">
                             {quickLinks.map((link) => (
                                 <li key={link.name}>
@@ -101,7 +101,7 @@ export default function Footer() {
 
                     {/* Services */}
                     <div>
-                        <h3 className="text-lg font-bold mb-4 text-[#00509E]">Our Services</h3>
+                        <h3 className="text-lg font-semibold mb-4 text-[#00509E]">Our Services</h3>
                         <ul className="space-y-2">
                             {services.map((service) => (
                                 <li key={service.name}>
@@ -119,7 +119,7 @@ export default function Footer() {
 
                     {/* Contact Info */}
                     <div>
-                        <h3 className="text-lg font-bold mb-4 text-[#00509E]">Contact Us</h3>
+                        <h3 className="text-lg font-semibold mb-4 text-[#00509E]">Contact Us</h3>
                         <ul className="space-y-3">
                             <li className="flex items-start space-x-3">
                                 <Phone className="w-5 h-5 text-[#F39C12] flex-shrink-0 mt-0.5" />

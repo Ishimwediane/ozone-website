@@ -1,85 +1,53 @@
 import Link from "next/link";
-import { Heart, ArrowRight } from "lucide-react";
+import Image from "next/image";
+import { Heart, ArrowRight, Sparkles } from "lucide-react";
+import ScrollReveal from "./ScrollReveal";
 
 export default function EmpoweringHerSection() {
     return (
-        <section className="relative min-h-screen flex items-center overflow-hidden">
-            {/* Fixed Background Image with Parallax Effect */}
+        <section className="relative flex items-center overflow-hidden">
+            {/* Background Image with Cinematic Overlay - Stable/Fixed */}
             <div
-                className="absolute inset-0 bg-cover bg-center bg-fixed"
-                style={{
-                    backgroundImage: "url('/images/photo4.jpg')",
-                }}
+                className="absolute inset-0 z-0 bg-fixed bg-cover bg-center"
+                style={{ backgroundImage: 'url(/images/photo4.jpg)' }}
             >
-                {/* Dark overlay for text readability */}
-                <div className="absolute inset-0 bg-black/70"></div>
+                <div className="absolute inset-0 bg-black/70 bg-gradient-to-r from-black/90 via-black/40 to-transparent"></div>
             </div>
 
-            {/* Content */}
-            <div className="container-custom relative z-10 py-24">
-                <div className="max-w-3xl mx-auto text-center">
-                    {/* Icon */}
-                    <div className="inline-block p-6 bg-[#F39C12] rounded-full shadow-2xl mb-8 animate-fadeInDown">
-                        <Heart className="w-16 h-16 text-white" />
+            <div className="container-custom relative z-10 py-12">
+                {/* Section Header - Standardized Mini-Header (Left Aligned) */}
+                <ScrollReveal animation="slideInLeft" className="mb-6">
+                    <div className="flex flex-col items-start">
+                        <h2 className="text-[10px] md:text-xs font-semibold tracking-[0.3em] uppercase text-[var(--orange-accent)] mb-2 inline-block relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-8 after:h-[1px] after:bg-[var(--orange-accent)]/30 after:transition-all after:duration-500 hover:after:w-12 hover:after:bg-[var(--orange-accent)]">
+                            Empowering Her
+                        </h2>
                     </div>
+                </ScrollReveal>
 
-                    {/* Section Label */}
-                    <div className="mb-4">
-                        <span className="text-xs font-semibold tracking-[0.4em] uppercase text-[#F39C12]">
-                            Special Initiative
-                        </span>
-                    </div>
+                <div className="max-w-xl text-left">
+                    <ScrollReveal animation="slideInLeft" delay={0.2}>
+                        <p className="text-sm md:text-base text-white/90 font-medium mb-8 leading-relaxed tracking-tight">
+                            "Dedicated to training and providing professional placement for female creative talents in photography and video production."
+                        </p>
+                    </ScrollReveal>
 
-                    {/* Title */}
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-6 leading-tight animate-fadeInUp">
-                        Empowering Her
-                    </h2>
+                    <ScrollReveal animation="slideInLeft" delay={0.4}>
+                        <div className="flex flex-col items-start">
+                            <Link
+                                href="/contact"
+                                className="group relative bg-[var(--orange-accent)] hover:bg-white text-white hover:text-black font-semibold px-8 py-3 rounded-full transition-all duration-500 shadow-xl hover:shadow-[var(--orange-accent)]/20 tracking-[.3em] uppercase text-[9px] flex items-center gap-2"
+                            >
+                                <Heart className="w-3 h-3 transition-transform duration-500 group-hover:scale-110" />
+                                SUPPORT
+                            </Link>
 
-                    {/* Description */}
-                    <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed animate-fadeInUp" style={{ animationDelay: '0.1s' }}>
-                        Dedicated initiatives and programs for empowering women through creativity, training,
-                        and professional opportunities. We believe in nurturing talent and providing platforms
-                        for women to shine in the entertainment industry.
-                    </p>
-
-                    {/* Features Grid */}
-                    <div className="grid md:grid-cols-3 gap-6 mb-12 animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
-                        <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6">
-                            <div className="text-3xl font-bold text-[#F39C12] mb-2">100+</div>
-                            <div className="text-sm text-white font-medium">Women Trained</div>
+                            <p className="mt-6 text-[9px] tracking-[.15em] uppercase text-white/40 font-medium">
+                                Creating opportunities through digital storytelling
+                            </p>
                         </div>
-                        <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6">
-                            <div className="text-3xl font-bold text-[#F39C12] mb-2">50+</div>
-                            <div className="text-sm text-white font-medium">Success Stories</div>
-                        </div>
-                        <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6">
-                            <div className="text-3xl font-bold text-[#F39C12] mb-2">5+</div>
-                            <div className="text-sm text-white font-medium">Years Impact</div>
-                        </div>
-                    </div>
-
-                    {/* CTA Buttons */}
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fadeInUp" style={{ animationDelay: '0.3s' }}>
-                        <Link
-                            href="/about"
-                            className="inline-flex items-center justify-center space-x-2 bg-[#F39C12] hover:bg-[#E67E22] text-white font-semibold px-10 py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
-                        >
-                            <span>Learn About Our Mission</span>
-                            <ArrowRight className="w-5 h-5" />
-                        </Link>
-                        <Link
-                            href="/contact"
-                            className="inline-flex items-center justify-center space-x-2 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white font-semibold px-10 py-4 rounded-full border-2 border-white/30 transition-all duration-300 hover:scale-105"
-                        >
-                            <span>Get Involved</span>
-                            <ArrowRight className="w-5 h-5" />
-                        </Link>
-                    </div>
+                    </ScrollReveal>
                 </div>
             </div>
-
-            {/* Decorative Elements */}
-            <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#1A1A1A] to-transparent"></div>
         </section>
     );
 }

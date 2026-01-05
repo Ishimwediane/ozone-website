@@ -41,7 +41,7 @@ export default function EditionClient({ edition }: EditionClientProps) {
                             Edition {edition.edition}
                         </span>
                     </div>
-                    <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-6 animate-fadeInDown">
+                    <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold text-white mb-6 animate-fadeInDown">
                         {edition.theme}
                     </h1>
                     <div className="flex flex-wrap gap-6 text-gray-200 animate-fadeInUp">
@@ -65,7 +65,7 @@ export default function EditionClient({ edition }: EditionClientProps) {
             <section className="section">
                 <div className="container-custom">
                     <div className="max-w-4xl mx-auto">
-                        <h2 className="text-4xl md:text-5xl font-serif font-bold text-[var(--text-primary)] mb-6">
+                        <h2 className="text-4xl md:text-5xl font-semibold text-[var(--text-primary)] mb-6">
                             About This Edition
                         </h2>
                         <p className="text-lg text-[var(--text-secondary)] leading-relaxed mb-8">
@@ -74,7 +74,7 @@ export default function EditionClient({ edition }: EditionClientProps) {
 
                         {/* Highlights */}
                         <div className="space-y-3">
-                            <h3 className="text-2xl font-bold text-[var(--text-primary)] mb-4">Event Highlights</h3>
+                            <h3 className="text-2xl font-semibold text-[var(--text-primary)] mb-4">Event Highlights</h3>
                             {edition.highlights.map((highlight: string, index: number) => (
                                 <div key={index} className="flex items-start space-x-3">
                                     <CheckCircle className="w-6 h-6 text-[#F39C12] flex-shrink-0 mt-0.5" />
@@ -90,8 +90,8 @@ export default function EditionClient({ edition }: EditionClientProps) {
             <section className="section bg-[var(--bg-secondary)] overflow-hidden">
                 <div className="container-custom">
                     <div className="text-center mb-16">
-                        <span className="text-xs font-bold tracking-[0.4em] uppercase text-[#F39C12] block mb-4">CINEMATIC EXPERIENCE</span>
-                        <h2 className="text-4xl md:text-6xl font-serif font-bold text-[var(--text-primary)]">
+                        <span className="text-xs font-semibold tracking-[0.4em] uppercase text-[#F39C12] block mb-4">CINEMATIC EXPERIENCE</span>
+                        <h2 className="text-4xl md:text-6xl font-semibold text-[var(--text-primary)]">
                             Video Highlights
                         </h2>
                     </div>
@@ -118,7 +118,7 @@ export default function EditionClient({ edition }: EditionClientProps) {
                                             </div>
                                         </button>
                                         <div className="absolute bottom-8 left-8 bg-black/70 backdrop-blur-md px-6 py-3 rounded-full border border-white/20">
-                                            <span className="text-white font-bold text-sm tracking-widest uppercase">{edition.videos[activeVideoIndex].title}</span>
+                                            <span className="text-white font-semibold text-sm tracking-widest uppercase">{edition.videos[activeVideoIndex].title}</span>
                                         </div>
                                     </>
                                 ) : (
@@ -136,7 +136,7 @@ export default function EditionClient({ edition }: EditionClientProps) {
 
                         {/* Video Playlist */}
                         <div className="space-y-6">
-                            <h3 className="text-xl font-bold uppercase tracking-widest text-[#F39C12] border-b border-[var(--border-color)] pb-4">Playlists</h3>
+                            <h3 className="text-xl font-semibold uppercase tracking-widest text-[#F39C12] border-b border-[var(--border-color)] pb-4">Playlists</h3>
                             {edition.videos.map((video, idx) => (
                                 <button
                                     key={idx}
@@ -155,7 +155,7 @@ export default function EditionClient({ edition }: EditionClientProps) {
                                         </div>
                                     </div>
                                     <div className="flex flex-col justify-center">
-                                        <p className={`font-bold text-sm mb-1 ${activeVideoIndex === idx ? 'text-[#F39C12]' : 'text-[var(--text-primary)]'}`}>{video.title}</p>
+                                        <p className={`font-semibold text-sm mb-1 ${activeVideoIndex === idx ? 'text-[#F39C12]' : 'text-[var(--text-primary)]'}`}>{video.title}</p>
                                         <p className="text-[10px] uppercase tracking-widest text-[var(--text-tertiary)] font-black">Official Media</p>
                                     </div>
                                 </button>
@@ -169,8 +169,8 @@ export default function EditionClient({ edition }: EditionClientProps) {
             <section className="section">
                 <div className="container-custom">
                     <div className="text-center mb-16">
-                        <span className="text-xs font-bold tracking-[0.4em] uppercase text-[#F39C12] block mb-4">PHOTO ALBUMS</span>
-                        <h2 className="text-4xl md:text-6xl font-serif font-bold text-[var(--text-primary)]">
+                        <span className="text-xs font-semibold tracking-[0.4em] uppercase text-[#F39C12] block mb-4">PHOTO ALBUMS</span>
+                        <h2 className="text-4xl md:text-6xl font-semibold text-[var(--text-primary)]">
                             Visual Legacy
                         </h2>
                     </div>
@@ -179,7 +179,7 @@ export default function EditionClient({ edition }: EditionClientProps) {
                         {edition.albums.map((album, albumIdx) => (
                             <div key={albumIdx} className="space-y-8">
                                 <div className="flex items-center gap-6">
-                                    <h3 className="text-2xl font-bold text-[var(--text-primary)] uppercase tracking-tighter">{album.name}</h3>
+                                    <h3 className="text-2xl font-semibold text-[var(--text-primary)] uppercase tracking-tighter">{album.name}</h3>
                                     <div className="h-px flex-1 bg-[var(--border-color)]"></div>
                                     <span className="text-[10px] font-black text-[var(--text-tertiary)] uppercase tracking-widest">{album.images.length} Photos</span>
                                 </div>
@@ -214,28 +214,28 @@ export default function EditionClient({ edition }: EditionClientProps) {
             <section className="section bg-[var(--bg-secondary)]">
                 <div className="container-custom">
                     <div className="text-center mb-12">
-                        <h2 className="text-4xl md:text-5xl font-serif font-bold text-[var(--text-primary)] mb-4">
+                        <h2 className="text-4xl md:text-5xl font-semibold text-[var(--text-primary)] mb-4">
                             By the Numbers
                         </h2>
                     </div>
 
                     <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
                         <div className="text-center bg-[var(--bg-primary)] border-2 border-[var(--border-color)] rounded-2xl p-8 hover:border-[#F39C12] transition-all duration-300">
-                            <div className="text-4xl md:text-5xl font-serif font-bold text-[#F39C12] mb-2">
+                            <div className="text-4xl md:text-5xl font-semibold text-[#F39C12] mb-2">
                                 {edition.stats.attendees}+
                             </div>
                             <div className="text-[var(--text-primary)] font-medium mb-1">Attendees</div>
                             <div className="text-[var(--text-tertiary)] text-sm">Fashion Enthusiasts</div>
                         </div>
                         <div className="text-center bg-[var(--bg-primary)] border-2 border-[var(--border-color)] rounded-2xl p-8 hover:border-[#F39C12] transition-all duration-300">
-                            <div className="text-4xl md:text-5xl font-serif font-bold text-[#F39C12] mb-2">
+                            <div className="text-4xl md:text-5xl font-semibold text-[#F39C12] mb-2">
                                 {edition.stats.designers}+
                             </div>
                             <div className="text-[var(--text-primary)] font-medium mb-1">Designers</div>
                             <div className="text-[var(--text-tertiary)] text-sm">Showcased Collections</div>
                         </div>
                         <div className="text-center bg-[var(--bg-primary)] border-2 border-[var(--border-color)] rounded-2xl p-8 hover:border-[#F39C12] transition-all duration-300">
-                            <div className="text-4xl md:text-5xl font-serif font-bold text-[#F39C12] mb-2">
+                            <div className="text-4xl md:text-5xl font-semibold text-[#F39C12] mb-2">
                                 {edition.stats.models}+
                             </div>
                             <div className="text-[var(--text-primary)] font-medium mb-1">Models</div>
@@ -249,7 +249,7 @@ export default function EditionClient({ edition }: EditionClientProps) {
             <section className="section">
                 <div className="container-custom">
                     <div className="bg-gradient-to-r from-[#F39C12] to-[#E67E22] rounded-3xl p-12 md:p-16 text-center text-white">
-                        <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                        <h2 className="text-4xl md:text-5xl font-semibold mb-6">
                             Interested in Participating?
                         </h2>
                         <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">

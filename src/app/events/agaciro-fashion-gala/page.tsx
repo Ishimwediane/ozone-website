@@ -28,7 +28,7 @@ export default function AgaciroFashionGalaPage() {
                             Signature Event
                         </span>
                     </div>
-                    <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-6 animate-fadeInDown">
+                    <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold text-white mb-6 animate-fadeInDown">
                         Agaciro Fashion Gala
                     </h1>
                     <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto animate-fadeInUp">
@@ -46,7 +46,7 @@ export default function AgaciroFashionGalaPage() {
                                 About the Gala
                             </span>
                         </div>
-                        <h2 className="text-4xl md:text-5xl font-serif font-bold text-[var(--text-primary)] mb-6">
+                        <h2 className="text-4xl md:text-5xl font-semibold text-[var(--text-primary)] mb-6">
                             A Celebration of Fashion Excellence
                         </h2>
                         <p className="text-lg text-[var(--text-secondary)] leading-relaxed">
@@ -57,28 +57,28 @@ export default function AgaciroFashionGalaPage() {
                     {/* Overall Stats */}
                     <div className="grid md:grid-cols-4 gap-8 mb-16">
                         <div className="text-center bg-[var(--bg-secondary)] border-2 border-[var(--border-color)] rounded-2xl p-8 hover:border-[#F39C12] transition-all duration-300">
-                            <div className="text-4xl md:text-5xl font-serif font-bold text-[#F39C12] mb-2">
+                            <div className="text-4xl md:text-5xl font-semibold text-[#F39C12] mb-2">
                                 {agaciroEditions.length}
                             </div>
                             <div className="text-[var(--text-primary)] font-medium mb-1">Editions</div>
                             <div className="text-[var(--text-tertiary)] text-sm">And Counting</div>
                         </div>
                         <div className="text-center bg-[var(--bg-secondary)] border-2 border-[var(--border-color)] rounded-2xl p-8 hover:border-[#F39C12] transition-all duration-300">
-                            <div className="text-4xl md:text-5xl font-serif font-bold text-[#F39C12] mb-2">
+                            <div className="text-4xl md:text-5xl font-semibold text-[#F39C12] mb-2">
                                 1000+
                             </div>
                             <div className="text-[var(--text-primary)] font-medium mb-1">Total Attendees</div>
                             <div className="text-[var(--text-tertiary)] text-sm">Across All Editions</div>
                         </div>
                         <div className="text-center bg-[var(--bg-secondary)] border-2 border-[var(--border-color)] rounded-2xl p-8 hover:border-[#F39C12] transition-all duration-300">
-                            <div className="text-4xl md:text-5xl font-serif font-bold text-[#F39C12] mb-2">
+                            <div className="text-4xl md:text-5xl font-semibold text-[#F39C12] mb-2">
                                 50+
                             </div>
                             <div className="text-[var(--text-primary)] font-medium mb-1">Designers</div>
                             <div className="text-[var(--text-tertiary)] text-sm">Featured</div>
                         </div>
                         <div className="text-center bg-[var(--bg-secondary)] border-2 border-[var(--border-color)] rounded-2xl p-8 hover:border-[#F39C12] transition-all duration-300">
-                            <div className="text-4xl md:text-5xl font-serif font-bold text-[#F39C12] mb-2">
+                            <div className="text-4xl md:text-5xl font-semibold text-[#F39C12] mb-2">
                                 100+
                             </div>
                             <div className="text-[var(--text-primary)] font-medium mb-1">Models</div>
@@ -97,7 +97,7 @@ export default function AgaciroFashionGalaPage() {
                                 Event History
                             </span>
                         </div>
-                        <h2 className="text-4xl md:text-5xl font-serif font-bold text-[var(--text-primary)] mb-4">
+                        <h2 className="text-4xl md:text-5xl font-semibold text-[var(--text-primary)] mb-4">
                             Past & Upcoming Editions
                         </h2>
                     </div>
@@ -126,7 +126,7 @@ export default function AgaciroFashionGalaPage() {
 
                                     {/* Content */}
                                     <div className={`p-8 lg:p-12 flex flex-col justify-center ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
-                                        <h3 className="text-3xl md:text-4xl font-serif font-bold text-[var(--text-primary)] mb-4 group-hover:text-[#F39C12] transition-colors duration-300">
+                                        <h3 className="text-3xl md:text-4xl font-semibold text-[var(--text-primary)] mb-4 group-hover:text-[#F39C12] transition-colors duration-300">
                                             {edition.theme}
                                         </h3>
 
@@ -165,7 +165,7 @@ export default function AgaciroFashionGalaPage() {
             <section className="section">
                 <div className="container-custom">
                     <div className="bg-gradient-to-r from-[#F39C12] to-[#E67E22] rounded-3xl p-12 md:p-16 text-center text-white">
-                        <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                        <h2 className="text-4xl md:text-5xl font-semibold mb-6">
                             Be Part of the Next Edition
                         </h2>
                         <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">

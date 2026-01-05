@@ -58,9 +58,9 @@ export default function AboutPage() {
 
                 <div className="container-custom relative z-10 text-center">
                     <span className="text-[10px] font-black tracking-[1.5em] text-[#F39C12] uppercase mb-8 block animate-fadeIn">THE OZONE STORY</span>
-                    <h1 className="text-5xl md:text-8xl font-serif font-bold text-white leading-[0.9] tracking-tighter mb-8 mix-blend-difference">
+                    <h1 className="text-5xl md:text-8xl font-semibold text-white leading-[0.9] tracking-tighter mb-8 mix-blend-difference">
                         BEYOND <br />
-                        <span className="italic font-light text-[#F39C12]">POSSIBLE.</span>
+                        <span className="text-[#F39C12]">POSSIBLE.</span>
                     </h1>
                 </div>
             </section>
@@ -70,8 +70,8 @@ export default function AboutPage() {
                 <div className="container-custom">
                     <div className="max-w-5xl">
                         <span className="text-[10px] font-black tracking-widest text-[#F39C12] uppercase mb-4 block">OUR PHILOSOPHY</span>
-                        <h2 className="text-4xl md:text-6xl font-serif font-bold mb-12 leading-none uppercase tracking-tighter">
-                            We don't just organize; we <span className="italic font-light text-[#F39C12]">elevate.</span>
+                        <h2 className="text-4xl md:text-6xl font-semibold mb-12 leading-none uppercase tracking-tighter">
+                            We don't just organize; we <span className="text-[#F39C12]">elevate.</span>
                         </h2>
                         <div className="grid md:grid-cols-2 gap-16 items-start">
                             <p className="text-xl md:text-2xl font-light text-[var(--text-secondary)] leading-relaxed">
@@ -91,8 +91,8 @@ export default function AboutPage() {
                     <div className="flex flex-col lg:flex-row justify-between items-end mb-24 gap-8">
                         <div className="max-w-2xl">
                             <span className="text-[10px] font-black tracking-[0.5em] text-[#F39C12] uppercase mb-4 block">THE OZONE ADVANTAGE</span>
-                            <h2 className="text-5xl md:text-8xl font-serif font-bold leading-[0.8] uppercase tracking-tighter">
-                                Why <br /> <span className="italic font-light">Choose Us.</span>
+                            <h2 className="text-5xl md:text-8xl font-semibold leading-[0.8] uppercase tracking-tighter">
+                                Why <br /> <span>Choose Us.</span>
                             </h2>
                         </div>
                         <p className="max-w-md text-[var(--text-tertiary)] text-lg border-l border-[#F39C12] pl-8">
@@ -106,7 +106,7 @@ export default function AboutPage() {
                                 <div className="text-[#F39C12] group-hover:text-white mb-8 transition-colors">
                                     {item.icon}
                                 </div>
-                                <h3 className="text-2xl font-bold mb-4 group-hover:text-white transition-colors">{item.title}</h3>
+                                <h3 className="text-2xl font-semibold mb-4 group-hover:text-white transition-colors">{item.title}</h3>
                                 <p className="text-[var(--text-secondary)] group-hover:text-white/80 transition-colors leading-relaxed">
                                     {item.description}
                                 </p>
@@ -123,7 +123,7 @@ export default function AboutPage() {
                         {values.map((v, i) => (
                             <div key={i} className="border-t-2 border-[var(--text-primary)] pt-8 group">
                                 <span className="text-[10px] font-black text-[#F39C12] block mb-4">0{i + 1}</span>
-                                <h4 className="text-3xl font-serif font-bold uppercase mb-2 group-hover:tracking-widest transition-all duration-700">{v.title}</h4>
+                                <h4 className="text-3xl font-semibold uppercase mb-2 group-hover:tracking-widest transition-all duration-700">{v.title}</h4>
                                 <p className="text-[10px] uppercase tracking-widest text-[var(--text-tertiary)]">{v.description}</p>
                             </div>
                         ))}
@@ -142,14 +142,14 @@ export default function AboutPage() {
                         <div className="space-y-16">
                             <div>
                                 <span className="text-[10px] font-black tracking-widest text-[#F39C12] uppercase mb-4 block">OUR MISSION</span>
-                                <p className="text-3xl md:text-4xl font-serif font-light leading-snug">
-                                    To provide <span className="italic text-[#F39C12]">world-class</span> entertainment that captures moments and empowers dreams.
+                                <p className="text-3xl md:text-4xl font-semibold leading-snug">
+                                    To provide <span className="text-[#F39C12]">world-class</span> entertainment that captures moments and empowers dreams.
                                 </p>
                             </div>
                             <div>
                                 <span className="text-[10px] font-black tracking-widest text-[#F39C12] uppercase mb-4 block">OUR VISION</span>
-                                <p className="text-3xl md:text-4xl font-serif font-light leading-snug">
-                                    To be the <span className="italic text-[#F39C12]">global benchmark</span> for creative excellence in Africa.
+                                <p className="text-3xl md:text-4xl font-semibold leading-snug">
+                                    To be the <span className="text-[#F39C12]">global benchmark</span> for creative excellence in Africa.
                                 </p>
                             </div>
                         </div>
@@ -160,9 +160,9 @@ export default function AboutPage() {
             {/* --- Final CTA --- */}
             <section className="section py-32 text-center">
                 <div className="container-custom">
-                    <h3 className="text-4xl md:text-5xl font-serif font-bold mb-16 uppercase tracking-tighter">
+                    <h3 className="text-4xl md:text-5xl font-semibold mb-16 uppercase tracking-tighter">
                         Let's Create <br />
-                        <span className="italic font-light">The Extraordinary.</span>
+                        <span>The Extraordinary.</span>
                     </h3>
                     <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
                         <Link

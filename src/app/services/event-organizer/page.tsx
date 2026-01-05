@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Calendar, MapPin, Users, CheckCircle, Sparkles, Megaphone, ShieldCheck } from "lucide-react";
+import { ArrowRight, Calendar, MapPin, Users, Sparkles, Megaphone, ShieldCheck } from "lucide-react";
+import ScrollReveal from "@/components/ScrollReveal";
 import { useState, useEffect } from "react";
 
 export default function EventOrganizerPage() {
@@ -83,19 +84,23 @@ export default function EventOrganizerPage() {
                 </div>
 
                 <div className="container-custom relative z-10 text-center">
-                    <span className="text-[10px] font-black tracking-[1.2em] text-[#F39C12] uppercase mb-8 block animate-fadeIn">SIGNATURE EVENTS</span>
-                    <h1 className="text-6xl md:text-[12rem] font-serif font-bold text-white leading-[0.8] tracking-tighter mb-12 mix-blend-difference">
-                        WE CRAFT <br />
-                        <span className="italic font-light">EXPERIENCES.</span>
-                    </h1>
-                    <div className="flex justify-center">
+                    <ScrollReveal animation="fadeInDown">
+                        <span className="text-[10px] font-black tracking-[1.2em] text-[#F39C12] uppercase mb-8 block">SIGNATURE EVENTS</span>
+                    </ScrollReveal>
+                    <ScrollReveal animation="fadeInUp">
+                        <h1 className="text-5xl md:text-7xl lg:text-8xl font-semibold text-white leading-[0.8] tracking-tighter mb-12">
+                            WE CRAFT <br />
+                            <span className="text-[var(--orange-accent)] opacity-90">EXPERIENCES.</span>
+                        </h1>
+                    </ScrollReveal>
+                    <ScrollReveal animation="fadeInUp" delay={0.2} className="flex justify-center">
                         <Link
                             href="#agaciro"
-                            className="group flex items-center gap-4 text-[10px] font-black uppercase tracking-[0.5em] text-white border border-white/30 px-10 py-5 hover:bg-white hover:text-black transition-all"
+                            className="group flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.5em] text-white border border-white/20 px-10 py-5 hover:bg-white hover:text-black transition-all rounded-full"
                         >
-                            FEATURING AGACIRO GALA <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+                            FEATURING AGACIRO GALA <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
                         </Link>
-                    </div>
+                    </ScrollReveal>
                 </div>
             </section>
 
@@ -118,17 +123,21 @@ export default function EventOrganizerPage() {
                         </div>
 
                         <div className="text-white">
-                            <span className="text-[10px] font-black tracking-[0.5em] text-[#F39C12] uppercase font-bold mb-6 block">PROUDLY ORGANIZED BY OZONE</span>
-                            <h2 className="text-5xl md:text-8xl font-serif font-bold mb-8 leading-tight">Agaciro <br /> <span className="italic font-light text-[#F39C12]">Fashion Gala.</span></h2>
-                            <p className="text-gray-400 text-xl font-light leading-relaxed mb-12">
-                                Rwanda's most prestigious annual fashion event. We handle everything from the conceptual theme to the high-stakes execution, bringing together the nation's elite talent on one stage.
-                            </p>
-                            <Link
-                                href="/events/agaciro-fashion-gala"
-                                className="inline-flex items-center gap-6 text-[10px] font-black uppercase tracking-[0.5em] text-white border-b border-[#F39C12] pb-3 hover:gap-10 transition-all"
-                            >
-                                EXPLORE THE EDITION DETAILS <ArrowRight className="w-5 h-5" />
-                            </Link>
+                            <ScrollReveal animation="fadeInDown" className="mini-header items-start">
+                                <h2 className="!items-start">Proudly Organized by Ozone</h2>
+                            </ScrollReveal>
+                            <ScrollReveal animation="fadeInUp">
+                                <h2 className="text-3xl md:text-5xl font-semibold mb-8 leading-tight">Agaciro <br /> <span className="text-[#F39C12]">Fashion Gala.</span></h2>
+                                <p className="text-gray-400 text-xs md:text-sm font-medium leading-relaxed mb-10 max-w-xl">
+                                    Rwanda's most prestigious annual fashion event. We handle everything from the conceptual theme to the high-stakes execution.
+                                </p>
+                                <Link
+                                    href="/events/agaciro-fashion-gala"
+                                    className="inline-flex items-center gap-6 text-[10px] font-semibold uppercase tracking-[0.5em] text-white border-b border-[#F39C12] pb-2 hover:gap-10 transition-all"
+                                >
+                                    EXPLORE THE EDITION <ArrowRight className="w-4 h-4" />
+                                </Link>
+                            </ScrollReveal>
                         </div>
                     </div>
                 </div>
@@ -138,19 +147,23 @@ export default function EventOrganizerPage() {
             <section className="section py-32 border-b border-[var(--border-color)]">
                 <div className="container-custom">
                     <div className="grid lg:grid-cols-2 gap-24 items-center">
-                        <div className="space-y-10">
-                            <span className="text-[10px] font-black tracking-[0.5em] text-[#F39C12] uppercase font-bold">OUR PHILOSOPHY</span>
-                            <h2 className="text-5xl md:text-7xl font-serif font-bold leading-none">Detail is not a luxury. <br /> <span className="italic font-light opacity-50">It's a necessity.</span></h2>
-                            <p className="text-xl text-[var(--text-secondary)] font-light leading-relaxed max-w-xl">
-                                At Ozone, we believe that every event is a story waiting to be told. We don't just organize logistics; we curate atmosphere, emotion, and memory. Our precision is matched only by our imagination.
-                            </p>
+                        <div className="space-y-8">
+                            <ScrollReveal animation="fadeInDown" className="mini-header items-start">
+                                <h2 className="!items-start">Our Philosophy</h2>
+                            </ScrollReveal>
+                            <ScrollReveal animation="fadeInUp">
+                                <h2 className="text-3xl md:text-5xl font-semibold leading-tight">Detail is <br /> <span className="opacity-50">Necessity.</span></h2>
+                                <p className="text-xs md:text-sm text-[var(--text-secondary)] font-medium leading-relaxed max-w-xl">
+                                    At Ozone, we believe that every event is a story waiting to be told. We don't just organize logistics; we curate atmosphere, emotion, and memory.
+                                </p>
+                            </ScrollReveal>
                             <div className="flex gap-12 pt-6">
                                 <div>
-                                    <p className="text-4xl font-serif font-bold text-[#F39C12]">100+</p>
+                                    <p className="text-4xl font-semibold text-[#F39C12]">100+</p>
                                     <p className="text-[10px] uppercase tracking-widest font-black opacity-40">Events Executed</p>
                                 </div>
                                 <div>
-                                    <p className="text-4xl font-serif font-bold text-[#F39C12]">10K+</p>
+                                    <p className="text-4xl font-semibold text-[#F39C12]">10K+</p>
                                     <p className="text-[10px] uppercase tracking-widest font-black opacity-40">Guest Impact</p>
                                 </div>
                             </div>
@@ -168,9 +181,11 @@ export default function EventOrganizerPage() {
             {/* --- Event Services Grid (Sharp Cards) --- */}
             <section id="services" className="section py-32 bg-[var(--bg-secondary)]">
                 <div className="container-custom">
-                    <div className="text-center mb-24">
-                        <span className="text-[10px] font-black tracking-[0.5em] text-[#F39C12] uppercase font-bold">CORE SERVICES</span>
-                        <h2 className="text-5xl md:text-8xl font-serif font-bold mt-4">Tailored Solutions</h2>
+                    <ScrollReveal animation="fadeInDown" className="mini-header">
+                        <h2>Core Services</h2>
+                    </ScrollReveal>
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl md:text-5xl font-semibold mt-4">Tailored Solutions</h2>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[var(--border-color)] border border-[var(--border-color)]">
@@ -183,12 +198,12 @@ export default function EventOrganizerPage() {
                                     <div className="text-[#F39C12] mb-8 group-hover:scale-110 transition-transform duration-500 origin-left">
                                         {event.icon}
                                     </div>
-                                    <h3 className="text-3xl md:text-4xl font-serif font-bold mb-6 uppercase tracking-tighter">{event.title}</h3>
-                                    <p className="text-[var(--text-secondary)] font-light leading-relaxed max-w-sm mb-10 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                                    <h3 className="text-xl md:text-2xl font-semibold mb-4 uppercase tracking-tighter">{event.title}</h3>
+                                    <p className="text-[10px] text-[var(--text-secondary)] font-medium leading-relaxed max-w-sm mb-8 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
                                         {event.description}
                                     </p>
-                                    <Link href="/contact" className="inline-flex items-center gap-4 text-[10px] font-black uppercase tracking-[0.3em] border-b border-transparent hover:border-[#F39C12] hover:text-[#F39C12] transition-all">
-                                        Start Planning <ArrowRight className="w-4 h-4" />
+                                    <Link href="/contact" className="inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.3em] border-b border-transparent hover:border-[#F39C12] hover:text-[#F39C12] transition-all">
+                                        Start Planning <ArrowRight className="w-3 h-3" />
                                     </Link>
                                 </div>
                             </div>
@@ -200,20 +215,20 @@ export default function EventOrganizerPage() {
             {/* --- The Process (Horizontal Flow) --- */}
             <section className="section py-32 bg-black text-white">
                 <div className="container-custom">
-                    <div className="flex flex-col md:flex-row justify-between items-baseline mb-24 gap-8">
-                        <h2 className="text-5xl md:text-8xl font-serif font-bold">The <span className="italic font-light opacity-50">Method</span></h2>
-                        <p className="max-w-xs text-white/50 text-sm font-light">From the first meeting to the final applause, our process is designed for absolute transparency and success.</p>
+                    <div className="flex flex-col md:flex-row justify-between items-baseline mb-16 gap-8">
+                        <h2 className="text-3xl md:text-5xl font-semibold">The <span className="opacity-50">Method</span></h2>
+                        <p className="max-w-xs text-white/50 text-[10px] font-medium">From the first meeting to the final applause.</p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
                         {processSteps.map((step, i) => (
                             <div key={i} className="relative group">
-                                <div className="text-6xl md:text-8xl font-serif font-black text-white/5 mb-8 group-hover:text-[#F39C12]/20 transition-colors">
+                                <div className="text-5xl md:text-7xl font-black text-white/5 mb-6 group-hover:text-[#F39C12]/20 transition-colors">
                                     {step.number}
                                 </div>
-                                <div className="absolute top-8 left-0">
-                                    <h4 className="text-xl font-bold uppercase tracking-widest mb-4">{step.title}</h4>
-                                    <p className="text-white/40 text-sm font-light leading-relaxed">{step.description}</p>
+                                <div className="absolute top-6 left-0">
+                                    <h4 className="text-[10px] md:text-xs font-semibold uppercase tracking-widest mb-3">{step.title}</h4>
+                                    <p className="text-white/40 text-[9px] font-medium leading-relaxed">{step.description}</p>
                                 </div>
                             </div>
                         ))}
@@ -224,21 +239,21 @@ export default function EventOrganizerPage() {
             {/* --- Call to Action --- */}
             <section className="section py-40 bg-[var(--bg-primary)]">
                 <div className="container-custom text-center">
-                    <div className="max-w-4xl mx-auto space-y-12">
-                        <h2 className="text-6xl md:text-[10rem] font-serif font-bold leading-[0.8] tracking-tighter">READY TO <br /> <span className="italic font-light text-[#F39C12]">IMPACT?</span></h2>
-                        <p className="text-xl text-[var(--text-secondary)] font-light max-w-2xl mx-auto">
-                            Whether it's an intimate gala or a massive brand activation, we have the team, the tech, and the talent to make it happen.
+                    <div className="max-w-4xl mx-auto space-y-8">
+                        <h2 className="text-4xl md:text-7xl font-semibold leading-[0.8] tracking-tighter">READY TO <br /> <span className="text-[#F39C12]">IMPACT?</span></h2>
+                        <p className="text-xs md:text-sm text-[var(--text-secondary)] font-medium max-w-xl mx-auto">
+                            Whether it's an intimate gala or a massive brand activation, we have the team to make it happen.
                         </p>
-                        <div className="flex flex-wrap justify-center gap-8 pt-8">
+                        <div className="flex flex-wrap justify-center gap-8 pt-6">
                             <Link
                                 href="/contact"
-                                className="bg-[#F39C12] text-white text-[10px] font-black uppercase tracking-[0.5em] px-16 py-8 hover:bg-black transition-all shadow-xl shadow-[#F39C12]/20"
+                                className="bg-[#F39C12] text-white text-[10px] font-semibold uppercase tracking-[0.5em] px-12 py-6 rounded-full hover:bg-black transition-all shadow-xl shadow-[#F39C12]/10"
                             >
                                 Get a Quote
                             </Link>
                             <Link
                                 href="/events/agaciro-fashion-gala"
-                                className="border border-[var(--border-color)] text-[var(--text-primary)] text-[10px] font-black uppercase tracking-[0.5em] px-16 py-8 hover:border-[#F39C12] transition-all"
+                                className="border border-[var(--border-color)] text-[var(--text-primary)] text-[10px] font-semibold uppercase tracking-[0.5em] px-12 py-6 rounded-full hover:border-[#F39C12] transition-all"
                             >
                                 View Case Study
                             </Link>

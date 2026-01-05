@@ -36,15 +36,15 @@ export default function Hero() {
     };
 
     return (
-        <section className="relative min-h-screen flex pt-20 bg-black">
+        <section className="relative flex pt-20 bg-black">
             {/* Image Slider */}
             <div className="absolute inset-0 bg-black overflow-hidden">
                 {slides.map((slide, index) => (
                     <div
                         key={slide.image}
                         className={`absolute inset-0 transition-all duration-[2000ms] ease-in-out ${index === currentSlide
-                                ? 'opacity-100 scale-100'
-                                : 'opacity-0 scale-110'
+                            ? 'opacity-100 scale-100'
+                            : 'opacity-0 scale-110'
                             }`}
                     >
                         <Image
@@ -63,37 +63,37 @@ export default function Hero() {
 
             {/* Content Overlay */}
             <div className="container-custom relative z-10">
-                <div className="flex items-center justify-center min-h-[calc(100vh-5rem)] py-20">
-                    <div className="text-center px-4">
-                        {/* Bold Typography */}
-                        <div className="relative inline-block animate-fadeInDown">
-                            <h1 className="font-serif text-[120px] md:text-[160px] lg:text-[200px] font-black text-white leading-none tracking-tight drop-shadow-2xl">
+                <div className="flex items-center justify-center py-8 md:py-12">
+                    <div className="text-center px-4 max-w-4xl">
+                        {/* Bold Typography - Scaled Down */}
+                        <div className="relative inline-block animate-fadeInDown mb-6">
+                            <h1 className="text-6xl md:text-8xl lg:text-9xl font-semibold text-white leading-none tracking-tighter drop-shadow-2xl">
                                 OZONE
                             </h1>
-                            <p className="text-sm md:text-base lg:text-lg font-semibold text-[#F39C12] tracking-[0.3em] uppercase drop-shadow-lg absolute -bottom-2 right-0">
+                            <p className="text-[10px] md:text-xs font-semibold text-[#F39C12] tracking-widest uppercase drop-shadow-lg absolute -bottom-4 right-0 opacity-80">
                                 Entertainment
                             </p>
                         </div>
 
-                        {/* Dynamic Message */}
+                        {/* Dynamic Message - Reduced Size */}
                         <p
                             key={currentSlide}
-                            className="text-lg md:text-2xl text-white/90 font-medium mt-6 drop-shadow-lg animate-fadeInUp"
+                            className="text-sm md:text-base text-white/70 font-medium mt-4 mb-8 drop-shadow-lg animate-fadeInUp tracking-wide max-w-xl mx-auto leading-relaxed"
                         >
                             {slides[currentSlide].message}
                         </p>
 
-                        {/* CTA Buttons */}
-                        <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
+                        {/* CTA Buttons - Refined */}
+                        <div className="flex flex-col sm:flex-row gap-8 justify-center items-center animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
                             <Link
                                 href="/portfolio"
-                                className="bg-[--orange-accent] hover:bg-orange-600 text-white font-semibold px-10 py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 tracking-wider uppercase text-sm"
+                                className="bg-[--orange-accent] hover:bg-orange-600 text-white font-semibold px-12 py-5 rounded-full transition-all duration-300 shadow-xl hover:shadow-orange-500/10 tracking-widest uppercase text-[10px]"
                             >
                                 View Our Work
                             </Link>
                             <Link
                                 href="/contact"
-                                className="bg-[--primary-blue] hover:bg-blue-700 text-white font-semibold px-10 py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 tracking-wider uppercase text-sm"
+                                className="bg-white/5 backdrop-blur-md hover:bg-white/10 text-white font-semibold px-12 py-5 rounded-full border border-white/20 transition-all duration-300 tracking-widest uppercase text-[10px]"
                             >
                                 Get In Touch
                             </Link>

@@ -78,8 +78,8 @@ export default function PortfolioPage() {
 
                 <div className="container-custom relative z-10 text-center">
                     <span className="text-[10px] font-black tracking-[1.5em] text-[#F39C12] uppercase mb-8 block animate-fadeIn">CREATIVE JOURNAL</span>
-                    <h1 className="text-5xl md:text-8xl font-serif font-bold text-white leading-tight tracking-tighter mb-4 mix-blend-difference">
-                        OUR <span className="italic font-light text-[#F39C12]">LEGACY.</span>
+                    <h1 className="text-5xl md:text-8xl font-semibold text-white leading-tight tracking-tighter mb-4 mix-blend-difference">
+                        OUR <span className="text-[#F39C12]">LEGACY.</span>
                     </h1>
                 </div>
             </section>
@@ -97,7 +97,7 @@ export default function PortfolioPage() {
                                 <button
                                     key={key}
                                     onClick={() => setActiveTab(key as any)}
-                                    className={`px-6 py-2 text-[10px] font-bold uppercase tracking-widest transition-all duration-300 border ${activeTab === key
+                                    className={`px-6 py-2 text-[10px] font-semibold uppercase tracking-widest transition-all duration-300 border ${activeTab === key
                                         ? 'bg-[#F39C12] text-white border-[#F39C12]'
                                         : 'bg-transparent text-[var(--text-secondary)] border-[var(--border-color)] hover:border-[#F39C12] hover:text-[#F39C12]'
                                         }`}
@@ -153,10 +153,10 @@ export default function PortfolioPage() {
 
                                     {/* Overlay Content */}
                                     <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-700 flex flex-col justify-end p-8">
-                                        <h3 className="text-2xl font-serif font-bold text-white uppercase tracking-tighter translate-y-4 group-hover:translate-y-0 transition-transform duration-700">
+                                        <h3 className="text-2xl font-semibold text-white uppercase tracking-tighter translate-y-4 group-hover:translate-y-0 transition-transform duration-700">
                                             {item.title}
                                         </h3>
-                                        <div className="flex items-center gap-4 text-[10px] font-bold text-[#F39C12] mt-4 translate-y-8 group-hover:translate-y-0 transition-transform duration-700 delay-100 uppercase tracking-widest">
+                                        <div className="flex items-center gap-4 text-[10px] font-semibold text-[#F39C12] mt-4 translate-y-8 group-hover:translate-y-0 transition-transform duration-700 delay-100 uppercase tracking-widest">
                                             <span>View Work</span>
                                             <ArrowRight className="w-4 h-4" />
                                         </div>
@@ -201,7 +201,7 @@ export default function PortfolioPage() {
 
                         <div className="text-center w-full max-w-2xl">
                             <span className="text-[10px] font-black text-[#F39C12] tracking-[1em] uppercase block mb-4">GALLERY SELECTION</span>
-                            <h3 className="text-4xl md:text-6xl font-serif font-bold text-white uppercase tracking-tighter">
+                            <h3 className="text-4xl md:text-6xl font-semibold text-white uppercase tracking-tighter">
                                 {currentItems[lightboxIndex].title}
                             </h3>
                         </div>
@@ -229,9 +229,9 @@ export default function PortfolioPage() {
             <section className="section py-40 bg-black text-white text-center">
                 <div className="container-custom">
                     <span className="text-[10px] font-black tracking-[1em] text-[#F39C12] uppercase mb-8 block">READY TO START?</span>
-                    <h2 className="text-5xl md:text-8xl font-serif font-bold mb-16 uppercase tracking-tighter leading-none">
+                    <h2 className="text-5xl md:text-8xl font-semibold mb-16 uppercase tracking-tighter leading-none">
                         Your vision, <br />
-                        <span className="italic font-light">our execution.</span>
+                        <span>our execution.</span>
                     </h2>
                     <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
                         <Link

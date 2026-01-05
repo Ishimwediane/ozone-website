@@ -72,8 +72,8 @@ export default function ContactPage() {
 
                 <div className="container-custom relative z-10 text-center">
                     <span className="text-[10px] font-black tracking-[1.5em] text-[#F39C12] uppercase mb-8 block animate-fadeIn">GET IN TOUCH</span>
-                    <h1 className="text-5xl md:text-8xl font-serif font-bold text-white leading-tight tracking-tighter mb-4 mix-blend-difference">
-                        LET'S <span className="italic font-light text-[#F39C12]">CONNECT.</span>
+                    <h1 className="text-5xl md:text-8xl font-semibold text-white leading-tight tracking-tighter mb-4 mix-blend-difference">
+                        LET'S <span className="text-[#F39C12]">CONNECT.</span>
                     </h1>
                 </div>
             </section>
@@ -86,9 +86,9 @@ export default function ContactPage() {
                         <div className="space-y-16 animate-fadeInLeft">
                             <div>
                                 <span className="text-[10px] font-black tracking-widest text-[#F39C12] uppercase mb-4 block">OUR OFFICES</span>
-                                <h2 className="text-4xl md:text-6xl font-serif font-bold leading-none uppercase tracking-tighter mb-8">
+                                <h2 className="text-4xl md:text-6xl font-semibold leading-none uppercase tracking-tighter mb-8">
                                     Global Vision <br />
-                                    <span className="italic font-light">Local Presence.</span>
+                                    <span>Local Presence.</span>
                                 </h2>
                                 <p className="text-lg text-[var(--text-secondary)] max-w-md leading-relaxed">
                                     We're strategically located in the heart of Kigali's creative scene, ready to collaborate on your next vision.
@@ -98,25 +98,25 @@ export default function ContactPage() {
                             <div className="grid sm:grid-cols-2 gap-12">
                                 <div className="space-y-4">
                                     <span className="text-[10px] font-black tracking-widest text-[#F39C12] uppercase block">Phone</span>
-                                    <a href="tel:+250798287085" className="text-2xl font-serif font-bold hover:text-[#F39C12] transition-colors">
+                                    <a href="tel:+250798287085" className="text-2xl font-semibold hover:text-[#F39C12] transition-colors">
                                         +250 798 287 085
                                     </a>
                                 </div>
                                 <div className="space-y-4">
                                     <span className="text-[10px] font-black tracking-widest text-[#F39C12] uppercase block">Email</span>
-                                    <a href="mailto:ozoneentertainments1@gmail.com" className="text-xl font-serif font-bold hover:text-[#F39C12] transition-colors break-all">
+                                    <a href="mailto:ozoneentertainments1@gmail.com" className="text-xl font-semibold hover:text-[#F39C12] transition-colors break-all">
                                         ozoneentertainments1@gmail.com
                                     </a>
                                 </div>
                                 <div className="space-y-4">
                                     <span className="text-[10px] font-black tracking-widest text-[#F39C12] uppercase block">Location</span>
-                                    <p className="text-xl font-serif font-bold">
+                                    <p className="text-xl font-semibold">
                                         Kimironko, Kigali, <br /> Rwanda
                                     </p>
                                 </div>
                                 <div className="space-y-4">
                                     <span className="text-[10px] font-black tracking-widest text-[#F39C12] uppercase block">Hours</span>
-                                    <p className="font-bold text-[var(--text-secondary)]">
+                                    <p className="font-semibold text-[var(--text-secondary)]">
                                         Mon - Fri: 9:00 - 18:00 <br />
                                         Sat: 10:00 - 16:00
                                     </p>
@@ -151,7 +151,7 @@ export default function ContactPage() {
                                         onChange={handleChange}
                                         required
                                         disabled={loading}
-                                        className="w-full bg-transparent border-b border-[var(--border-color)] py-4 font-serif text-2xl focus:border-[#F39C12] outline-none transition-colors appearance-none cursor-pointer"
+                                        className="w-full bg-transparent border-b border-[var(--border-color)] py-4 text-2xl focus:border-[#F39C12] outline-none transition-colors appearance-none cursor-pointer"
                                     >
                                         <option value="" className="bg-[var(--bg-secondary)]">Select Category</option>
                                         <option value="Event Planning" className="bg-[var(--bg-secondary)]">Event Planning</option>
@@ -173,7 +173,7 @@ export default function ContactPage() {
                                             onChange={handleChange}
                                             required
                                             placeholder="Ex. John Doe"
-                                            className="w-full bg-transparent border-b border-[var(--border-color)] py-4 font-serif text-xl focus:border-[#F39C12] outline-none transition-colors"
+                                            className="w-full bg-transparent border-b border-[var(--border-color)] py-4 text-xl focus:border-[#F39C12] outline-none transition-colors"
                                         />
                                     </div>
                                     <div className="space-y-2">
@@ -185,7 +185,7 @@ export default function ContactPage() {
                                             onChange={handleChange}
                                             required
                                             placeholder="Ex. john@example.com"
-                                            className="w-full bg-transparent border-b border-[var(--border-color)] py-4 font-serif text-xl focus:border-[#F39C12] outline-none transition-colors"
+                                            className="w-full bg-transparent border-b border-[var(--border-color)] py-4 text-xl focus:border-[#F39C12] outline-none transition-colors"
                                         />
                                     </div>
                                 </div>
@@ -199,7 +199,7 @@ export default function ContactPage() {
                                         required
                                         rows={4}
                                         placeholder="Briefly describe your vision..."
-                                        className="w-full bg-transparent border-b border-[var(--border-color)] py-4 font-serif text-xl focus:border-[#F39C12] outline-none transition-colors resize-none"
+                                        className="w-full bg-transparent border-b border-[var(--border-color)] py-4 text-xl focus:border-[#F39C12] outline-none transition-colors resize-none"
                                     ></textarea>
                                 </div>
 
@@ -213,14 +213,14 @@ export default function ContactPage() {
                                 </button>
 
                                 {success && (
-                                    <div className="flex items-center gap-4 text-[#F39C12] font-bold tracking-widest text-[10px] uppercase animate-fadeIn">
+                                    <div className="flex items-center gap-4 text-[#F39C12] font-semibold tracking-widest text-[10px] uppercase animate-fadeIn">
                                         <CheckCircle className="w-4 h-4" />
                                         <span>Message Sent Successfully</span>
                                     </div>
                                 )}
 
                                 {error && (
-                                    <div className="text-red-500 font-bold tracking-widest text-[10px] uppercase animate-fadeIn">
+                                    <div className="text-red-500 font-semibold tracking-widest text-[10px] uppercase animate-fadeIn">
                                         {error}
                                     </div>
                                 )}
@@ -236,9 +236,9 @@ export default function ContactPage() {
                     <div className="max-w-4xl mx-auto">
                         <div className="mb-16">
                             <span className="text-[10px] font-black tracking-widest text-[#F39C12] uppercase mb-4 block">ESSENTIALS</span>
-                            <h2 className="text-4xl md:text-6xl font-serif font-bold leading-none uppercase tracking-tighter">
+                            <h2 className="text-4xl md:text-6xl font-semibold leading-none uppercase tracking-tighter">
                                 Frequently Asked <br />
-                                <span className="italic font-light">Questions.</span>
+                                <span>Questions.</span>
                             </h2>
                         </div>
 
@@ -258,7 +258,7 @@ export default function ContactPage() {
                                 },
                             ].map((faq, index) => (
                                 <div key={index} className="group cursor-default">
-                                    <h3 className="text-2xl font-serif font-bold uppercase tracking-tighter mb-4 group-hover:text-[#F39C12] transition-colors flex gap-4">
+                                    <h3 className="text-2xl font-semibold uppercase tracking-tighter mb-4 group-hover:text-[#F39C12] transition-colors flex gap-4">
                                         <span className="text-[#F39C12] font-sans text-sm">0{index + 1}</span>
                                         {faq.q}
                                     </h3>
@@ -278,17 +278,17 @@ export default function ContactPage() {
                     <div className="grid md:grid-cols-3 gap-12">
                         <div className="space-y-4">
                             <MessageSquare className="w-8 h-8 text-[#F39C12] mx-auto mb-4" />
-                            <h4 className="font-bold uppercase tracking-widest">Chat with us</h4>
+                            <h4 className="font-semibold uppercase tracking-widest">Chat with us</h4>
                             <p className="text-white/50 text-sm">Response within 24 hours</p>
                         </div>
                         <div className="space-y-4">
                             <Globe className="w-8 h-8 text-[#F39C12] mx-auto mb-4" />
-                            <h4 className="font-bold uppercase tracking-widest">Global Reach</h4>
+                            <h4 className="font-semibold uppercase tracking-widest">Global Reach</h4>
                             <p className="text-white/50 text-sm">Operating across Africa</p>
                         </div>
                         <div className="space-y-4">
                             <ArrowRight className="w-8 h-8 text-[#F39C12] mx-auto mb-4" />
-                            <h4 className="font-bold uppercase tracking-widest">Start Now</h4>
+                            <h4 className="font-semibold uppercase tracking-widest">Start Now</h4>
                             <p className="text-white/50 text-sm">Let’s begin the journey</p>
                         </div>
                     </div>
