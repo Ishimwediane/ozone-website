@@ -190,20 +190,20 @@ export default function EventOrganizerPage() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[var(--border-color)] border border-[var(--border-color)]">
                         {eventTypes.map((event, i) => (
-                            <div key={i} className="group relative bg-[var(--bg-primary)] p-12 md:p-20 overflow-hidden min-h-[500px] flex flex-col justify-end">
+                            <div key={i} className="group relative bg-[var(--bg-primary)] p-6 md:p-8 overflow-hidden min-h-[220px] flex flex-col justify-end">
                                 <div className="absolute inset-0 z-0 opacity-0 group-hover:opacity-20 transition-opacity duration-700">
                                     <Image src={event.image} alt={event.title} fill className="object-cover grayscale" />
                                 </div>
                                 <div className="relative z-10">
-                                    <div className="text-[#F39C12] mb-8 group-hover:scale-110 transition-transform duration-500 origin-left">
+                                    <div className="text-[#F39C12] mb-3 group-hover:scale-110 transition-transform duration-500 origin-left">
                                         {event.icon}
                                     </div>
-                                    <h3 className="text-xl md:text-2xl font-semibold mb-4 uppercase tracking-tighter">{event.title}</h3>
-                                    <p className="text-[10px] text-[var(--text-secondary)] font-medium leading-relaxed max-w-sm mb-8 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                                    <h3 className="text-base md:text-lg font-semibold mb-1 uppercase tracking-tighter">{event.title}</h3>
+                                    <p className="text-[8px] text-[var(--text-secondary)] font-medium leading-relaxed max-w-sm mb-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
                                         {event.description}
                                     </p>
-                                    <Link href="/contact" className="inline-flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.3em] border-b border-transparent hover:border-[#F39C12] hover:text-[#F39C12] transition-all">
-                                        Start Planning <ArrowRight className="w-3 h-3" />
+                                    <Link href="/contact" className="inline-flex items-center gap-4 text-[8px] font-semibold uppercase tracking-[0.3em] border-b border-transparent hover:border-[#F39C12] hover:text-[#F39C12] transition-all">
+                                        Start Planning <ArrowRight className="w-2 h-2" />
                                     </Link>
                                 </div>
                             </div>
