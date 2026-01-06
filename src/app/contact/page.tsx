@@ -58,7 +58,7 @@ export default function ContactPage() {
     return (
         <div className="min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)] transition-colors duration-500 overflow-x-hidden">
             {/* --- Editorial Hero Section --- */}
-            <section className="relative h-[60vh] flex items-center justify-center overflow-hidden bg-black">
+            <section className="relative h-[40vh] flex items-center justify-center overflow-hidden bg-black">
                 <div className="absolute inset-0 z-0">
                     <Image
                         src="/images/photo3.jpg"
@@ -71,52 +71,52 @@ export default function ContactPage() {
                 </div>
 
                 <div className="container-custom relative z-10 text-center">
-                    <span className="text-[10px] font-black tracking-[1.5em] text-[#F39C12] uppercase mb-8 block animate-fadeIn">GET IN TOUCH</span>
-                    <h1 className="text-5xl md:text-8xl font-semibold text-white leading-tight tracking-tighter mb-4 mix-blend-difference">
+                    <span className="text-[10px] font-semibold tracking-[1.5em] text-[#F39C12] uppercase mb-4 block animate-fadeIn">GET IN TOUCH</span>
+                    <h1 className="text-4xl md:text-6xl font-semibold text-white leading-tight tracking-tighter mb-2 mix-blend-difference uppercase">
                         LET'S <span className="text-[#F39C12]">CONNECT.</span>
                     </h1>
                 </div>
             </section>
 
             {/* --- Asymmetrical Contact Section --- */}
-            <section className="py-24">
+            <section className="py-16 md:py-20">
                 <div className="container-custom">
-                    <div className="grid lg:grid-cols-2 gap-24 items-start">
+                    <div className="grid lg:grid-cols-2 gap-16 items-start">
                         {/* Info Column */}
-                        <div className="space-y-16 animate-fadeInLeft">
+                        <div className="space-y-12 animate-fadeInLeft">
                             <div>
-                                <span className="text-[10px] font-black tracking-widest text-[#F39C12] uppercase mb-4 block">OUR OFFICES</span>
-                                <h2 className="text-4xl md:text-6xl font-semibold leading-none uppercase tracking-tighter mb-8">
+                                <span className="text-[10px] font-semibold tracking-widest text-[#F39C12] uppercase mb-3 block">OUR OFFICES</span>
+                                <h2 className="text-3xl md:text-5xl font-semibold leading-none uppercase tracking-tighter mb-6">
                                     Global Vision <br />
                                     <span>Local Presence.</span>
                                 </h2>
-                                <p className="text-lg text-[var(--text-secondary)] max-w-md leading-relaxed">
+                                <p className="text-base text-[var(--text-secondary)] max-w-md leading-relaxed">
                                     We're strategically located in the heart of Kigali's creative scene, ready to collaborate on your next vision.
                                 </p>
                             </div>
 
-                            <div className="grid sm:grid-cols-2 gap-12">
-                                <div className="space-y-4">
-                                    <span className="text-[10px] font-black tracking-widest text-[#F39C12] uppercase block">Phone</span>
-                                    <a href="tel:+250798287085" className="text-2xl font-semibold hover:text-[#F39C12] transition-colors">
+                            <div className="grid sm:grid-cols-2 gap-8">
+                                <div className="space-y-3">
+                                    <span className="text-[10px] font-semibold tracking-widest text-[#F39C12] uppercase block">Phone</span>
+                                    <a href="tel:+250798287085" className="text-xl font-semibold hover:text-[#F39C12] transition-colors">
                                         +250 798 287 085
                                     </a>
                                 </div>
-                                <div className="space-y-4">
-                                    <span className="text-[10px] font-black tracking-widest text-[#F39C12] uppercase block">Email</span>
-                                    <a href="mailto:ozoneentertainments1@gmail.com" className="text-xl font-semibold hover:text-[#F39C12] transition-colors break-all">
+                                <div className="space-y-3">
+                                    <span className="text-[10px] font-semibold tracking-widest text-[#F39C12] uppercase block">Email</span>
+                                    <a href="mailto:ozoneentertainments1@gmail.com" className="text-lg font-semibold hover:text-[#F39C12] transition-colors break-all">
                                         ozoneentertainments1@gmail.com
                                     </a>
                                 </div>
-                                <div className="space-y-4">
-                                    <span className="text-[10px] font-black tracking-widest text-[#F39C12] uppercase block">Location</span>
-                                    <p className="text-xl font-semibold">
+                                <div className="space-y-3">
+                                    <span className="text-[10px] font-semibold tracking-widest text-[#F39C12] uppercase block">Location</span>
+                                    <p className="text-lg font-semibold">
                                         Kimironko, Kigali, <br /> Rwanda
                                     </p>
                                 </div>
-                                <div className="space-y-4">
-                                    <span className="text-[10px] font-black tracking-widest text-[#F39C12] uppercase block">Hours</span>
-                                    <p className="font-semibold text-[var(--text-secondary)]">
+                                <div className="space-y-3">
+                                    <span className="text-[10px] font-semibold tracking-widest text-[#F39C12] uppercase block">Hours</span>
+                                    <p className="font-semibold text-[var(--text-secondary)] text-sm">
                                         Mon - Fri: 9:00 - 18:00 <br />
                                         Sat: 10:00 - 16:00
                                     </p>
@@ -124,7 +124,7 @@ export default function ContactPage() {
                             </div>
 
                             {/* Minimalist Map Container */}
-                            <div className="relative aspect-video rounded-none overflow-hidden grayscale border border-[var(--border-color)] group">
+                            <div className="relative aspect-video rounded-none overflow-hidden grayscale border border-[var(--border-color)] group max-w-md">
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.377964878165!2d30.100291!3d-1.940893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca73d2df48ff7%3A0x5c6957621a18a4bb!2sKimironko%2C%20Kigali!5e0!3m2!1sen!2srw!4v1680000000000!5m2!1sen!2srw"
                                     width="100%"
@@ -140,10 +140,10 @@ export default function ContactPage() {
                         </div>
 
                         {/* Form Column */}
-                        <div className="bg-[var(--bg-secondary)] p-8 md:p-16 border border-[var(--border-color)] animate-fadeInRight">
-                            <form onSubmit={handleSubmit} className="space-y-8">
-                                <div className="space-y-2">
-                                    <span className="text-[10px] font-black tracking-widest text-[#F39C12] uppercase block">INQUIRY TYPE</span>
+                        <div className="bg-[var(--bg-secondary)] p-8 md:p-12 border border-[var(--border-color)] animate-fadeInRight">
+                            <form onSubmit={handleSubmit} className="space-y-6">
+                                <div className="space-y-1">
+                                    <span className="text-[10px] font-semibold tracking-widest text-[#F39C12] uppercase block">INQUIRY TYPE</span>
                                     <select
                                         id="subject"
                                         name="subject"
@@ -151,7 +151,7 @@ export default function ContactPage() {
                                         onChange={handleChange}
                                         required
                                         disabled={loading}
-                                        className="w-full bg-transparent border-b border-[var(--border-color)] py-4 text-2xl focus:border-[#F39C12] outline-none transition-colors appearance-none cursor-pointer"
+                                        className="w-full bg-transparent border-b border-[var(--border-color)] py-2 text-lg focus:border-[#F39C12] outline-none transition-colors appearance-none cursor-pointer"
                                     >
                                         <option value="" className="bg-[var(--bg-secondary)]">Select Category</option>
                                         <option value="Event Planning" className="bg-[var(--bg-secondary)]">Event Planning</option>
@@ -163,9 +163,9 @@ export default function ContactPage() {
                                     </select>
                                 </div>
 
-                                <div className="grid md:grid-cols-2 gap-8">
-                                    <div className="space-y-2">
-                                        <span className="text-[10px] font-black tracking-widest text-[#F39C12] uppercase block">YOUR NAME</span>
+                                <div className="grid md:grid-cols-2 gap-6">
+                                    <div className="space-y-1">
+                                        <span className="text-[10px] font-semibold tracking-widest text-[#F39C12] uppercase block">YOUR NAME</span>
                                         <input
                                             type="text"
                                             name="name"
@@ -173,11 +173,11 @@ export default function ContactPage() {
                                             onChange={handleChange}
                                             required
                                             placeholder="Ex. John Doe"
-                                            className="w-full bg-transparent border-b border-[var(--border-color)] py-4 text-xl focus:border-[#F39C12] outline-none transition-colors"
+                                            className="w-full bg-transparent border-b border-[var(--border-color)] py-2 text-base focus:border-[#F39C12] outline-none transition-colors"
                                         />
                                     </div>
-                                    <div className="space-y-2">
-                                        <span className="text-[10px] font-black tracking-widest text-[#F39C12] uppercase block">YOUR EMAIL</span>
+                                    <div className="space-y-1">
+                                        <span className="text-[10px] font-semibold tracking-widest text-[#F39C12] uppercase block">YOUR EMAIL</span>
                                         <input
                                             type="email"
                                             name="email"
@@ -185,31 +185,31 @@ export default function ContactPage() {
                                             onChange={handleChange}
                                             required
                                             placeholder="Ex. john@example.com"
-                                            className="w-full bg-transparent border-b border-[var(--border-color)] py-4 text-xl focus:border-[#F39C12] outline-none transition-colors"
+                                            className="w-full bg-transparent border-b border-[var(--border-color)] py-2 text-base focus:border-[#F39C12] outline-none transition-colors"
                                         />
                                     </div>
                                 </div>
 
-                                <div className="space-y-2">
-                                    <span className="text-[10px] font-black tracking-widest text-[#F39C12] uppercase block">TELL US MORE</span>
+                                <div className="space-y-1">
+                                    <span className="text-[10px] font-semibold tracking-widest text-[#F39C12] uppercase block">TELL US MORE</span>
                                     <textarea
                                         name="message"
                                         value={formData.message}
                                         onChange={handleChange}
                                         required
-                                        rows={4}
+                                        rows={3}
                                         placeholder="Briefly describe your vision..."
-                                        className="w-full bg-transparent border-b border-[var(--border-color)] py-4 text-xl focus:border-[#F39C12] outline-none transition-colors resize-none"
+                                        className="w-full bg-transparent border-b border-[var(--border-color)] py-2 text-base focus:border-[#F39C12] outline-none transition-colors resize-none"
                                     ></textarea>
                                 </div>
 
                                 <button
                                     type="submit"
                                     disabled={loading}
-                                    className="w-full group flex items-center justify-between text-[10px] font-black uppercase tracking-[0.5em] text-black bg-white px-12 py-6 hover:bg-[#F39C12] hover:text-white transition-all disabled:opacity-50"
+                                    className="w-full group flex items-center justify-between text-[10px] font-semibold uppercase tracking-[0.4em] text-black bg-white px-8 py-5 hover:bg-[#F39C12] hover:text-white transition-all disabled:opacity-50"
                                 >
                                     <span>{loading ? "SENDING..." : "SUBMIT REQUEST"}</span>
-                                    <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+                                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                 </button>
 
                                 {success && (
@@ -231,18 +231,18 @@ export default function ContactPage() {
             </section>
 
             {/* --- FAQ Section --- */}
-            <section className="py-24 border-t border-[var(--border-color)]">
+            <section className="py-16 border-t border-[var(--border-color)]">
                 <div className="container-custom">
                     <div className="max-w-4xl mx-auto">
-                        <div className="mb-16">
-                            <span className="text-[10px] font-black tracking-widest text-[#F39C12] uppercase mb-4 block">ESSENTIALS</span>
-                            <h2 className="text-4xl md:text-6xl font-semibold leading-none uppercase tracking-tighter">
+                        <div className="mb-12">
+                            <span className="text-[10px] font-semibold tracking-widest text-[#F39C12] uppercase mb-3 block">ESSENTIALS</span>
+                            <h2 className="text-3xl md:text-5xl font-semibold leading-none uppercase tracking-tighter">
                                 Frequently Asked <br />
                                 <span>Questions.</span>
                             </h2>
                         </div>
 
-                        <div className="grid gap-12">
+                        <div className="grid gap-10">
                             {[
                                 {
                                     q: "What is the typical turnaround for a project?",
@@ -258,11 +258,11 @@ export default function ContactPage() {
                                 },
                             ].map((faq, index) => (
                                 <div key={index} className="group cursor-default">
-                                    <h3 className="text-2xl font-semibold uppercase tracking-tighter mb-4 group-hover:text-[#F39C12] transition-colors flex gap-4">
+                                    <h3 className="text-xl font-semibold uppercase tracking-tighter mb-3 group-hover:text-[#F39C12] transition-colors flex gap-4">
                                         <span className="text-[#F39C12] font-sans text-sm">0{index + 1}</span>
                                         {faq.q}
                                     </h3>
-                                    <p className="text-[var(--text-secondary)] leading-relaxed pl-8">
+                                    <p className="text-[var(--text-secondary)] text-sm leading-relaxed pl-8">
                                         {faq.a}
                                     </p>
                                 </div>
@@ -273,23 +273,23 @@ export default function ContactPage() {
             </section>
 
             {/* --- Global Support Footer --- */}
-            <section className="section py-32 bg-black text-white text-center">
+            <section className="section py-20 bg-black text-white text-center">
                 <div className="container-custom">
-                    <div className="grid md:grid-cols-3 gap-12">
-                        <div className="space-y-4">
-                            <MessageSquare className="w-8 h-8 text-[#F39C12] mx-auto mb-4" />
-                            <h4 className="font-semibold uppercase tracking-widest">Chat with us</h4>
-                            <p className="text-white/50 text-sm">Response within 24 hours</p>
+                    <div className="grid md:grid-cols-3 gap-8">
+                        <div className="space-y-3">
+                            <MessageSquare className="w-8 h-8 text-[#F39C12] mx-auto mb-2" />
+                            <h4 className="font-semibold uppercase tracking-widest text-xs">Chat with us</h4>
+                            <p className="text-white/50 text-[10px]">Response within 24 hours</p>
                         </div>
-                        <div className="space-y-4">
-                            <Globe className="w-8 h-8 text-[#F39C12] mx-auto mb-4" />
-                            <h4 className="font-semibold uppercase tracking-widest">Global Reach</h4>
-                            <p className="text-white/50 text-sm">Operating across Africa</p>
+                        <div className="space-y-3">
+                            <Globe className="w-8 h-8 text-[#F39C12] mx-auto mb-2" />
+                            <h4 className="font-semibold uppercase tracking-widest text-xs">Global Reach</h4>
+                            <p className="text-white/50 text-[10px]">Operating across Africa</p>
                         </div>
-                        <div className="space-y-4">
-                            <ArrowRight className="w-8 h-8 text-[#F39C12] mx-auto mb-4" />
-                            <h4 className="font-semibold uppercase tracking-widest">Start Now</h4>
-                            <p className="text-white/50 text-sm">Let’s begin the journey</p>
+                        <div className="space-y-3">
+                            <ArrowRight className="w-8 h-8 text-[#F39C12] mx-auto mb-2" />
+                            <h4 className="font-semibold uppercase tracking-widest text-xs">Start Now</h4>
+                            <p className="text-white/50 text-[10px]">Let’s begin the journey</p>
                         </div>
                     </div>
                 </div>
